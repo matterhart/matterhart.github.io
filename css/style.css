@@ -10,8 +10,9 @@ background-color:black;
   display: flex;
   justify-content: center;
   align-items: center;
+  height:100%;
 }
 .container img
 {
-  width:25%
+  width:300px;
 }
