@@ -6,6 +6,8 @@ padding:0px;
 background-color:black;
 }
 
-body{
+.container{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
