@@ -6,49 +6,43 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css?v=1212115">
     <script type="text/javascript" src="./js/main.js"></script>
   </head>
-  <body>
+<body>
     <div class="content-box">
-  <div class="content-header">
-          <img onclick="location.href='/'" src="./img/header_logo.png" />
-          <a href="./about">about</a>
-          <a href="./work">work</a>
-          <a href="./play">let's play</a>
-  </div>
-  <div class="content-main center">
-    <table style="height:100%;width:90%;">
-      <tr>
-          <td style="height:100%;width:35%;vertical-align: top;padding:0px;margin:0px;text-align: center;font-size: 0px;">
-            <img src="./img/play1.jpg" style="height:25%;padding:0px;margin:0px;max-height: 150px;" />
-            <img src="./img/play2.jpg" style="height:25%;padding:0px;margin:0px;max-height: 150px;" />
-            <img src="./img/play3.jpg" style="height:50%;padding:0px;margin:0px;max-height: 300px;" />
-            <img src="./img/play4.jpg" style="height:25%;padding:0px;margin:0px;max-height: 150px;" />
-            <img src="./img/play5.jpg" style="height:25%;padding:0px;margin:0px;max-height: 150px;" />
-          </td>
-          <td id="form-filler" style="width:55%;vertical-align: top;padding-left:50px;">
-            <h2 style="margin-top:0px;">let's play</h2>
-            <p>So you’re curious about working together? That’s fantastic. <br>
+      <div class="content-header">
+              <img onclick="location.href='/'" src="./img/header_logo.png" />
+              <a href="./about">about</a>
+              <a href="./work">work</a>
+              <a href="./play">let's play</a>
+      </div>
+      <div class="content-main center">
+        <div style="text-align: center;">
+          <h2>let's play</h2>
+           <p>So you’re curious about working together? That’s fantastic. <br>
                 Tell me everything. Or keep it simple. <br>
                 You do you. And don’t apologize for it. </p>
-              <p>What can Sugar Dream Studio shoot for you? </p>
-              <div class="select-style">
-                <select onchange="toggleForms()">
-                  <option value="WEDDING">WEDDING</option>
-                  <option value="DOCUSHORT">DOCUSHORT</option>
-                  <option value="EVENT">EVENT</option>
-                  <option value="OTHER">OTHER</option>
-                </select>
-              </div>
-            </div>
-          </td>
-      </tr>
-    </table>
+           <p>What can Sugar Dream Studio shoot for you? </p>
+           <div class="select-style">
+            <select>
+              <option value="WEDDING">WEDDING</option>
+              <option value="DOCUSHORT">DOCUSHORT</option>
+              <option value="EVENT">EVENT</option>
+              <option value="OTHER">OTHER</option>
+            </select>
+           </div>
+           <a class="btn" style="vertical-align: middle;"onclick="toggleForms()">go</a>
+        </div>
+      </div>
+    <div class="content-footer">
+        <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
+        <a target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
+    </div>
   </div>
-  <div class="content-footer">
-          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-      <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
-    
+  <div class="modal">
+    <div class="modal-body">
+        <a class="close" onclick="closeModal()">&times;</a>
+        <div id="form-filler"></div>
+    </div>
   </div>
-</div>
-  </body>
+</body>
 </html>
 
