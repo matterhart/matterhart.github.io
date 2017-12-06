@@ -133,15 +133,8 @@ input,textarea{
 
 #bgvid{
   position: absolute;
-    z-index: 0;
-    background: url(../landing.jpg) no-repeat;
-    background-size: 100% 100%;
-    top: 0px;
-    left: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+   height:100%;
+   width: 100%;
 }
 @media only screen and (max-device-width: 700px){
 
