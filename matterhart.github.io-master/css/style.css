@@ -1,0 +1,139 @@
+@font-face {
+    font-family: Brandon;
+    src: url("Brandon_reg.otf") format("opentype");
+}
+html,body{
+font-family: Brandon;
+font-size:18px;
+width:100%;
+height:100%;
+margin:0px;
+padding:0px;
+color:white;    
+background-color:black;
+z-index:1;  
+}
+
+.container{
+  
+  height:100%;
+  position:relative;
+}
+
+.content-box{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    z-index:10;
+}
+.content-header{
+    flex: 0 1 165px;
+    text-align: right;
+}
+.content-main{
+    flex: 1 1 auto;
+    position: relative;
+    width: 100%;
+}
+.content-main.center{
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+}
+.content-main.padded{
+    padding: 0px 30px;
+}
+.content-footer{
+    flex: 0 1 70px;
+    text-align: center;
+    line-height: 70px;
+}
+.content-header img
+{
+    cursor: pointer;
+    float:left;height:125px;margin:20px
+}
+.content-header a{
+    text-decoration: none;
+    display: inline-block;
+    margin-right:50px;
+    line-height: 165px;
+    color:white;
+}
+.content-main .main-img
+{
+  width:300px;
+  position: relative;
+  align-self: center;
+  z-index:2;
+}
+
+.content-main .background-mask{
+    height:100%;
+    width:80%;
+    position: absolute;
+    top:0px;
+    z-index: 1;
+
+}
+a.btn{
+    display: inline-block;
+    padding: 5px 10px;
+    color:white;
+    text-decoration: none;
+    border:1px solid white;
+}
+a.btn:hover{
+    background-color:rgba(255,255,255,0.3);
+}
+    .select-style {
+    border: 1px solid #fff;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color:black;
+    margin-left:15%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    color:white;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+label,input[type="text"]{
+  width:150px;
+  display: inline-block;
+  margin-bottom:10px;
+
+}
+label.long{
+  width:80%;
+}
+textarea,.filler{
+  width: 100%;
+  max-width: 500px;
+}
+.content-footer img{
+    vertical-align: middle;
+}
+input,textarea{
+    border:1px solid white;
+
+    background-color:blackz;
+}
+@media only screen and (max-device-width: 700px){
+
+.content-main .main-img
+{
+  width:500px;
+}
+}
