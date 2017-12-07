@@ -71,6 +71,7 @@ z-index:1;
   position: relative;
   align-self: center;
   z-index:2;
+  top:-40px;
 }
 
 .content-main .background-mask{
