@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Sugar Dream Studio</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=1212115">
-    <script type="text/javascript" src="./js/main.js"></script>
-  </head>
-  <body>
-    <div class="content-box">
-  <div class="content-header">
-          <img onclick="location.href='/'" src="./img/header_logo.png" />
-          <a href="./about">about</a>
-          <a href="./work">work</a>
-          <a href="./play">let's play</a>
-  </div>
-  <div class="content-main" style="overflow: hidden;position: relative;">
-    <div id="left-arrow" onclick="goleft()" style="position: absolute;left:0px;top:40%;display: flex;justify-content: center;align-items: center;display:none;"><div style="background-color: rgba(0,0,0,0.7);flex:0 0 auto;cursor: pointer;padding:20px;    border-top-right-radius: 20px;border-bottom-right-radius: 20px;"><img style="width:75px;vertical-align: middle;" src="./img/ArrowLeft.png" /></div></div>
 
-    <div style="display:flex;flex-grow:1;width:2248px;">
-      <div class="frameHolder" style="float:left;margin:0px 50px;">
-      <iframe style="" src="https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0"  width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <div style="text-align:center;padding:20px;">Aaron & Evelyn &bull; Seattle</div>
+<head>
+  <meta charset="UTF-8">
+  <title>Sugar Dream Studio</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css?v=1212115">
+  <script type="text/javascript" src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="content-box" style="min-width:1024px;">
+    <div class="content-header">
+      <img onclick="location.href='/'" src="./img/header_logo.png" />
+      <a href="./about">about</a>
+      <a href="./work">work</a>
+      <a href="./play">let's play</a>
     </div>
-    <div class="frameHolder" style="float:left;margin:0px 50px;">
-      <iframe style="" src="https://player.vimeo.com/video/243380169?title=0&byline=0&portrait=0"  width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            <div style="text-align:center;padding:20px;">Fremonster Spectacular &bull; Seattle</div>
+    <div class="content-main center" style="overflow: hidden;position: relative;">
+       
+
+      <div style="height:649px;flex: 0 0 auto;align-self:center;position:relative;">
+
+        <div id="left-arrow" onclick="goleft()" style="position:absolute;left:0px;top:250px;display:none;">
+        <div style="background-color: rgba(0,0,0,0.7);cursor: pointer;padding:20px;    border-top-right-radius: 20px;border-bottom-right-radius: 20px;">
+          <img style="width:75px;vertical-align: middle;" src="./img/ArrowLeft.png" />
+        </div>
+      </div>
+
+        <div class="frameHolder" >
+          <iframe style="" src="https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0" width="1024" height="576" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <div style="text-align:center;padding:20px;" id="subtitle">Aaron & Evelyn &bull; Seattle</div>
+        </div>
+        <!-- <div class="frameHolder" style="float:left;margin:0px 50px;">
+          <iframe style="" src="https://player.vimeo.com/video/243380169?title=0&byline=0&portrait=0" width="1024" height="576" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <div style="text-align:center;padding:20px;">Fremonster Spectacular &bull; Seattle</div>
+
+        </div> -->
+
+        <div id="right-arrow" onclick="goright()" style="position:absolute;right:0px;top:250px;">
+          <div style="background-color: rgba(0,0,0,0.7);cursor: pointer;padding:20px;    border-top-left-radius: 20px;border-bottom-left-radius: 20px;">
+            <img style="width:75px;vertical-align: middle;" src="./img/Arrow.png" />
+          </div>
+        </div>
+
+      </div>
+
 
     </div>
-    </div>
-    <div id="right-arrow" onclick="goright()" style="position: absolute;right:0px;top:40%;display: flex;justify-content: center;align-items: center;"><div style="background-color: rgba(0,0,0,0.7);flex:0 0 auto;cursor: pointer;padding:20px;    border-top-left-radius: 20px;border-bottom-left-radius: 20px;"><img style="width:75px;vertical-align: middle;" src="./img/Arrow.png" /></div></div>
+    <div class="content-footer">
+      <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/">
+        <img height="30" src='./img/insta.png' />
+      </a>
+      <a target="_blank" href="https://vimeo.com/sugardreamstudio">
+        <img height="30" src='./img/vimeo.png' />
+      </a>
 
+    </div>
   </div>
-  <div class="content-footer">
-          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-      <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
-    
-  </div>
-</div>
-  </body>
+</body>
+
 </html>

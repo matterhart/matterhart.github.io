@@ -44,7 +44,12 @@ z-index:1;
     padding: 0px 30px;
 }
 .content-footer{
-    flex: 0 1 70px;
+  position:fixed;
+  bottom:0px;
+  height:70px;
+  width:100%;
+  background-color: black;
+    /*flex: 0 1 70px;*/
     text-align: center;
     line-height: 70px;
 }
@@ -90,7 +95,6 @@ a.btn:hover{
 .select-style {
     border: 1px solid #fff;
     width: 120px;
-    border-radius: 3px;
     overflow: hidden;
     background-color:black;
     display:inline-block;
@@ -142,6 +146,7 @@ input[type="text"]{
   position: absolute;
    height:100%;
    width: 100%;
+   object-fit:cover;
 }
 
 .modal{

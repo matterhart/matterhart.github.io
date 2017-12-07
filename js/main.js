@@ -1,32 +1,54 @@
 var interval;
 var margin;
+var mulit;
 function goright(){
-    margin = 50;
-    interval = setInterval(function(){ animateRight()},10);
+    margin = 1;
+    multi = -1;
+    interval = setInterval(function(){ animateRight()},20);
     document.getElementById('right-arrow').style.display="none";
-    document.getElementById('left-arrow').style.display="block";
+    
 }
 
 function animateRight(){
-    margin -= 50;
-    if(margin <= -950){
+    margin += multi*0.05;
+    document.getElementsByClassName('frameHolder')[0].style.opacity= margin;
+    if(margin <= 0){
+        multi = 1;
+        clearInterval(interval);
+        document.getElementById('subtitle').innerHTML = "Fremonster Spectacular &bull; Seattle";
+        var frame = document.getElementsByTagName('iframe')[0];
+        frame.onload = function () {interval = setInterval(function(){ animateRight()},20);};
+        frame.src="https://player.vimeo.com/video/243380169?title=0&byline=0&portrait=0";
+    }
+    if(margin >= 1)
+    {
+        document.getElementById('left-arrow').style.display="block";
         clearInterval(interval);
     }
-    document.getElementsByClassName('frameHolder')[0].style.marginLeft= margin+"px";
 }
 function animateLeft(){
-    margin += 50;
-    if(margin >= 20){
+    margin += multi*0.05;
+    document.getElementsByClassName('frameHolder')[0].style.opacity= margin;
+    if(margin <= 0){
+        multi = 1;
+        clearInterval(interval);
+        document.getElementById('subtitle').innerHTML = "Aaron & Evelyn &bull; Seattle";
+        var frame = document.getElementsByTagName('iframe')[0];
+        frame.onload = function () {interval = setInterval(function(){ animateLeft()},20);};
+        frame.src="https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0";
+    }
+    if(margin >= 1)
+    {
+        document.getElementById('right-arrow').style.display="block";
         clearInterval(interval);
     }
-    document.getElementsByClassName('frameHolder')[0].style.marginLeft= margin+"px";
 }
 
 function goleft(){
-    margin = -950;
-    interval = setInterval(function(){ animateLeft()},10);
+    margin = 1;
+    multi = -1;
+    interval = setInterval(function(){ animateLeft()},20);
     document.getElementById('left-arrow').style.display="none";
-    document.getElementById('right-arrow').style.display="block";
 }
 
 function toggleForms()
