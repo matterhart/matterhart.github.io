@@ -196,8 +196,9 @@ input[type="text"]{
   padding:20px;
 }
 .modal-body form{
-  margin:auto;
+  margin-left:20px;
   text-transform: lowercase;
+  display:block;width:80%
 }
 .patchwork-footer{
   position:absolute;

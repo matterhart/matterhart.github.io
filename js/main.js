@@ -118,7 +118,7 @@ function sendRequest(payload){
   var params = 'payload='+encodeURIComponent(payload)+'&';
     xmlHttp.send( params);
 }
-var forms = ['<form style="display:block;width:80%;">\
+var forms = ['<form >\
                 <label for="names">Your Names:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
                 <label for="dates">Wedding Date:</label><input type="text" id="dates" />\
@@ -128,7 +128,7 @@ var forms = ['<form style="display:block;width:80%;">\
                 <label  for="songs">Name your 3 most recently played songs:</label><textarea rows="6" id="songs"></textarea> \
               <div class = "filler" style="text-align: center;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
-              '<form style="display:block;width:80%;">\
+              '<form >\
                 <label for="names">Your Name:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
                 <label  for="ramble">What story would you like Sugar Dream Studio to help you tell:</label><textarea rows="6" id="ramble"></textarea>\
@@ -136,7 +136,7 @@ var forms = ['<form style="display:block;width:80%;">\
                 <label  for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label><textarea rows="6" id="songs"></textarea> \
               <div class = "filler" style="text-align: center;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
-              '<form style="display:block;width:80%;">\
+              '<form >\
                 <label for="names">Your Name:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
                 <label  for="desc">Event Name & Description:</label><textarea rows="6" id="desc"></textarea>\
