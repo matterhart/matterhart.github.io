@@ -107,12 +107,9 @@ function submitForm()
 }
 
 function sendRequest(payload){
-    var request = new XMLHttpRequest();
-    request.open('GET', 'http://erhart.me/chat', true);
-    request.send();
 
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "POST", url, true ); // false for synchronous request
+    xmlHttp.open( "POST", 'http://erhart.me/chat', true ); // false for synchronous request
     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xmlHttp.onload = function() {
