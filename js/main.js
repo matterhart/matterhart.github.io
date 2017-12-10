@@ -71,8 +71,46 @@ function toggleForms()
         break;
     }
 }
-function closeModal(){
-    document.getElementsByClassName('modal')[0].style.display="none";
+function closeModal(e){
+    if(e.target.className == "modal" || e.target.className == "close"){
+    document.getElementsByClassName('modal')[0].style.display="none";}
+}
+function submitForm()
+{
+    let form = document.getElementsByTagName('form')[0];
+    let payload = "";
+    let errors = false;
+    for( i = 0; i<form.children.length; i++)
+    {
+        let item = form.children[i];
+        switch(item.tagName){
+            case 'LABEL':
+                payload .= item.innerText+' ';
+            break;
+            case 'INPUT': case 'TEXTAREA':
+                if(item.value.trim() != "")
+                {
+                    payload .= item.value+"<br>";
+                }
+                else
+                {
+                    form.children[i-1].innerHTML += "<span style='color:red;font-weight:bold;'>*</span>";
+                    errors = true;
+                }
+            break;
+        }
+    }
+    if(!errors)
+    {
+        sendRequest(payload);
+    }
+}
+
+function sendRequest(payload){
+    var request = new XMLHttpRequest();
+    request.open('GET', 'http://erhart.me/chat', true);
+    request.send();
+    document.getElementById('form-filler').innerHTML ='<p style="color:#777;margin:30px auto; width:75%;">Reac hout if you need anything, <a style="color:#777;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :) I look forward to chatting with you!</p>';
 }
 var forms = ['<form style="display:block;width:80%;">\
                 <label for="names">Your Names:</label><input type="text" id="names" />\
@@ -83,7 +121,7 @@ var forms = ['<form style="display:block;width:80%;">\
                 <label  for="daydream">When day dreaming about your wedding day, what vibe do you envision:</label><textarea rows="6" id="daydream"></textarea>\
                 <label  for="songs">Name your 3 most recently played songs:</label><textarea rows="6" id="songs"></textarea> \
               <div class = "filler" style="text-align: center;">\
-              <a class="btn">submit</a></form>',
+              <a class="btn" onclick="submitForm()">submit</a></form>',
               '<form style="display:block;width:80%;">\
                 <label for="names">Your Name:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
@@ -91,7 +129,7 @@ var forms = ['<form style="display:block;width:80%;">\
                 <label  for="daydream">What gets you out of bed in the morning?</label><textarea rows="6" id="daydream"></textarea>\
                 <label  for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label><textarea rows="6" id="songs"></textarea> \
               <div class = "filler" style="text-align: center;">\
-              <a class="btn">submit</a></form>',
+              <a class="btn" onclick="submitForm()">submit</a></form>',
               '<form style="display:block;width:80%;">\
                 <label for="names">Your Name:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
@@ -101,6 +139,6 @@ var forms = ['<form style="display:block;width:80%;">\
                 <label  for="ramble">What about Sugar Dream studio has piqued your interest:</label><textarea rows="6" id="ramble"></textarea>\
                 <label  for="daydream">When day dreaming about your event, what vibe do you envision? </label><textarea rows="6" id="daydream"></textarea>\
               <div class = "filler" style="text-align: center;">\
-              <a class="btn">submit</a></form>',
-              '<p>Hey, ya know what? Just email me at <a style="color:white;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :)I look forward to chatting with you!</p>'
+              <a class="btn" onclick="submitForm()">submit</a></form>',
+              '<p style="color:#777;margin:30px auto; width:75%;">Hey, ya know what? Just email me at <a style="color:#777;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :) I look forward to chatting with you!</p>'
               ];

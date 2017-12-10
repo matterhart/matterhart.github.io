@@ -7,19 +7,19 @@
     <script type="text/javascript" src="./js/main.js"></script>
     <style type="text/css">
     .content-footer{
-      position: fixed;
+      position: absolute;
       
     }</style>
   </head>
 <body>
-    <div class="content-box">
+    <div class="content-box" style="min-width: 700px;min-height: 700px;">
       <div class="content-header">
               <img onclick="location.href='/'" src="./img/header_logo.png" />
               <a href="./about">about</a>
               <a href="./work">work</a>
               <a href="./play">let's play</a>
       </div>
-      <div class="content-main center">
+      <div class="content-main">
         <div style="text-align: center;">
           <h2>let's play</h2>
            <p>So you’re curious about working together? That’s fantastic. <br>
@@ -34,17 +34,19 @@
               <option value="OTHER">OTHER</option>
             </select>
            </div>
-           <a class="btn" style="vertical-align: middle;"onclick="toggleForms()">go</a>
+           <a class="btn" style="vertical-align: middle;padding-bottom:10px;"onclick="toggleForms()">go</a>
         </div>
+        <div>images</div>
+        <div class="content-footer">
+              <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
+              <a target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
+          </div>
       </div>
-    <div class="content-footer">
-        <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-        <a target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
-    </div>
+
   </div>
-  <div class="modal">
+  <div class="modal" onclick="closeModal(event)">
     <div class="modal-body">
-        <a class="close" onclick="closeModal()">&times;</a>
+        <a class="close" onclick="closeModal(event)">&times;</a>
         <div id="form-filler"></div>
     </div>
   </div>

@@ -103,7 +103,7 @@ a.btn:hover{
 }
 
 .select-style select {
-    padding: 11.5px 8px;
+    padding: 14px 8px;
     width: 130%;
     border: none;
     box-shadow: none;
@@ -111,6 +111,11 @@ a.btn:hover{
     background-image: none;
     -webkit-appearance: none;
     color:white;
+}
+@-moz-document url-prefix() { 
+  .select-style select {
+     padding:13px 8px;
+  }
 }
 
 .select-style select:focus {
@@ -160,6 +165,7 @@ input[type="text"]{
   justify-content: center;
   align-items: center;
   display:none;
+  overflow-y: scroll;
 }
 .modal a.btn{
   border:1px solid #4C4C4C;
@@ -178,11 +184,13 @@ input[type="text"]{
 }
 .modal-body{
   flex: 0 0 auto;
-  position: relative;
+  position: absolute;
+  top:160px;
+  left:20%;
   background-color:white;
   border:1px solid grey;
   width:60%;
-  min-height:60%;
+  margin-bottom:70px;
 }
 .modal-body #form-filler{
   padding:20px;
