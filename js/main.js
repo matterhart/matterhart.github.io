@@ -85,12 +85,12 @@ function submitForm()
         let item = form.children[i];
         switch(item.tagName){
             case 'LABEL':
-                payload .= item.innerText+' ';
+                payload += item.innerText+' ';
             break;
             case 'INPUT': case 'TEXTAREA':
                 if(item.value.trim() != "")
                 {
-                    payload .= item.value+"<br>";
+                    payload += item.value+"<br>";
                 }
                 else
                 {
