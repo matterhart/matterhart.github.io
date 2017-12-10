@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <title>Sugar Dream Studio</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css?v=1212115">
+    <style type="text/css">
+      //simple max-width query
+      @media screen and ( max-height: 600px ){
+          .content-box {background: blue;}
+      }
+    </style>
   </head>
   <body>
-    <div class="content-box" style="min-width:700px;">
+    <div class="content-box" style="min-width:700px;min-height: 875px;">
   <div class="content-header">
           <img onclick="location.href='/'" src="./img/header_logo.png" />
           <a href="./about">about</a>
           <a href="./work">work</a>
           <a href="./play">let's play</a>
   </div>
-  <div class="content-main" style="flex-direction: column;display:flex;">
-    <table style="width:80%;margin:auto;flex:1;">
+  <div class="content-main" style="">
+    <table style="width:80%;margin:0px auto;flex:0 0 auto;">
       <tr>
           <td style="width:70%;vertical-align: top;">
             <h2>about</h2>
             <p>I’ve got a passion for emotion. For beautiful, intensified life. For moments that move you and vulnerability that makes you weak in the knees. For truth and tenderness. For the raw and the real. </p>
             <p>Taking the road less traveled and capturing life with my whole heart bring me purpose. I jive with movers, shakers, dreamers, and makers who believe in the power of sharing their stories. And I would love to help you tell yours. </p>
             <p>I film weddings, events, and any tale worth telling. Interested in making magic together?</p>
-            <div style="text-align: center">
-              <a class="btn" href="./play.html">let's play</a>
+            <div style="text-align: center;margin-top:2em;">
+              <a class="btn" href="./play">let's play</a>
             </div>
 
           </td>
@@ -31,20 +37,18 @@
           </td>
       </tr>
     </table>
-    <div style="width: 100%;padding:0px;margin-top:20px;text-align: center;font-size: 0px;flex:1;">
-      <img src="./img/about1.jpg" style="width:30%;padding:0px;margin:0px;" />
-      <img src="./img/about2.jpg" style="width:30%;padding:0px;margin:0px;" />
-      <img src="./img/about3.jpg" style="width:30%;padding:0px;margin:0px;" />
-
+    <div class="patchwork-footer">
+      <img class="patchwork-image" src="./img/about1.jpg" />
+      <img class="patchwork-image" src="./img/about2.jpg" />
+      <img class="patchwork-image" src="./img/about3.jpg"  />
+      <div class="content-footer">
+          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
+          <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a> 
+      </div>
     </div>
 
   </div>
-  <div class="content-footer">
-          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-      <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
-    
   </div>
-</div>
   </body>
 </html>
 
