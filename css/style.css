@@ -100,6 +100,7 @@ a.btn:hover{
     background-color:black;
     display:inline-block;
     vertical-align: middle;
+    padding-left:50px;
 }
 
 .select-style select {
@@ -186,10 +187,10 @@ input[type="text"]{
   flex: 0 0 auto;
   position: absolute;
   top:160px;
-  left:20%;
+  left:25%;
   background-color:white;
   border:1px solid grey;
-  width:60%;
+  width:50%;
   margin-bottom:70px;
 }
 .modal-body #form-filler{
@@ -197,8 +198,32 @@ input[type="text"]{
 }
 .modal-body form{
   text-transform: lowercase;
-  display:block;width:80%
+  display:block;width:95%
 }
+.modal .select-style {
+    border: 1px solid #4C4C4C;
+    overflow: hidden;
+    padding-left:70px;
+    background-color: white;
+    padding-right:15px;
+}
+.modal .select-style select {
+    padding: 14px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    color:#4C4C4C;
+}
+@-moz-document url-prefix() { 
+  .modal .select-style select {
+     padding:13px 8px;
+  }
+}
+
+
 .patchwork-footer{
   position:absolute;
   width: 90%;padding:0px;font-size: 0px;
