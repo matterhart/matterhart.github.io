@@ -298,9 +298,10 @@ left:5%;
   top:-95px;
 }
 .select-style{
-  width:170px;
+  width:220px;
   padding-top:2px;
   padding-bottom:2px;
+  padding-left:90px;
 }
 .select-style select{
     font-size: 25px;
