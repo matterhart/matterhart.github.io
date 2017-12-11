@@ -52,6 +52,7 @@ z-index:1;
     /*flex: 0 1 70px;*/
     text-align: center;
     line-height: 70px;
+    font-size: 0px;
 }
 .content-header img
 {
