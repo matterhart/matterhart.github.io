@@ -159,7 +159,7 @@ var forms = ['<form >\
                 <label  for="ramble">What story would you like Sugar Dream Studio to help you tell:</label><textarea rows="6" id="ramble"></textarea>\
                 <label  for="daydream">What gets you out of bed in the morning:</label><textarea rows="6" id="daydream"></textarea>\
                 <label class="radioLabel" for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label>\
-                <div style="margin: 20px;width:200px;">\
+                <div style="margin: 20px;width:300px;">\
                   <ul class="radioInput">\
                     <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>pizza</li>\
                     <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>hamburger</li>\

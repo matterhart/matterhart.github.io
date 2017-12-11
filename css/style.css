@@ -302,4 +302,11 @@ left:5%;
 .select-style select{
     font-size: 25px;
 }
+input,textarea{
+  display:block;
+  font-size:32px;
+}
+table img{
+  height:450px !important;
+}
 }
