@@ -100,6 +100,11 @@ function submitForm()
             break;
         }
     }
+    if(form.getElementsByTagName('select').length == 1)
+    {
+        let item = form.getElementsByTagName('select')[0];
+        payload += item.value + "<br>";
+    }
     if(!errors)
     {
         sendRequest(payload);
