@@ -27,7 +27,7 @@ z-index:1;
     z-index:10;
 }
 .content-header{
-    flex: 0 1 165px;
+    flex: 0 1 125px;
     text-align: right;
 }
 .content-main{
@@ -57,13 +57,13 @@ z-index:1;
 .content-header img
 {
     cursor: pointer;
-    float:left;height:125px;margin:20px
+    float:left;height:105px;margin:20px 20px;
 }
 .content-header a{
     text-decoration: none;
     display: inline-block;
     margin-right:50px;
-    line-height: 165px;
+    line-height: 125px;
     color:white;
 }
 .content-main .main-img
@@ -199,7 +199,7 @@ input[type="text"]{
 }
 .modal-body form{
   text-transform: lowercase;
-  display:block;width:95%
+  display:block;width:100%;
 }
 .modal .select-style {
     border: 1px solid #4C4C4C;

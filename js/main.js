@@ -137,7 +137,7 @@ var forms = ['<form >\
                 <label for="names">Your Name:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
                 <label  for="ramble">What story would you like Sugar Dream Studio to help you tell:</label><textarea rows="6" id="ramble"></textarea>\
-                <label  for="daydream">What gets you out of bed in the morning?</label><textarea rows="6" id="daydream"></textarea>\
+                <label  for="daydream">What gets you out of bed in the morning:</label><textarea rows="6" id="daydream"></textarea>\
                 <label  for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label><div style="margin: 20px auto;width:200px;"><div class="select-style"><select id="songs"><option value="PIZZA">PIZZA</option><option value="HAMBURGER">HAMBURGER</option><option value="BURRITO">BURRITO</option></select></div></div> \
               <div class = "filler" style="text-align: center;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
@@ -148,8 +148,7 @@ var forms = ['<form >\
                 <label for="dates">Event Date:</label><input type="text" id="dates" />\
                 <label for="location">Event Location:</label><input type="text" id="location" />\
                 <label  for="ramble">What about Sugar Dream studio has piqued your interest:</label><textarea rows="6" id="ramble"></textarea>\
-                <label  for="daydream">When day dreaming about your event, what vibe do you envision? </label><textarea rows="6" id="daydream"></textarea>\
               <div class = "filler" style="text-align: center;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
-              '<p style="color:#777;margin:30px auto; width:75%;">Hey, ya know what? Just email me at <a style="color:#777;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :) I look forward to chatting with you!</p>'
+              '<p style="color:#777;margin:30px 0px; width:100%;">Hey, ya know what? Just email me at <a style="color:#777;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :)<br>I look forward to chatting with you!</p>'
               ];
