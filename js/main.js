@@ -162,8 +162,8 @@ var forms = ['<form >\
                 <div style="margin: 20px;width:200px;">\
                   <ul class="radioInput">\
                     <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>pizza</li>\
-                    <li onclick="radioInputClick(this,event)"><div style="margin-top:-5px;" class="radioBtn"></div>hamburger</li>\
-                    <li onclick="radioInputClick(this,event)"><div style="margin-top:-5px;" class="radioBtn"></div>burrito</li>\
+                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>hamburger</li>\
+                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>burrito</li>\
                   </ul>\
                 </div> <div class = "filler" style="text-align: center;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
