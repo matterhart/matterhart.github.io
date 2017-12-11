@@ -307,14 +307,19 @@ left:5%;
 }
 input,textarea{
   display:block;
-  font-size:28px;
+  font-family: inherit;
+  font-size: inherit;
   line-height: 1em;
   resize:none;
-  max-height:168px;
+}
+textarea{
+  font-size:14px;
+    height:168px;
+
 }
 textarea.triple
 {
-  max-height:84px;
+  height:84px;
 }
 table img{
   height:450px !important;
