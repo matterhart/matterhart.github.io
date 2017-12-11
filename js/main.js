@@ -118,7 +118,7 @@ function sendRequest(payload){
     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xmlHttp.onload = function() {
-        document.getElementById('form-filler').innerHTML ='<p style="color:#777;margin:30px auto; width:75%;">Reach out if you need anything, <a style="color:#777;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :) I look forward to chatting with you!</p>';
+        document.getElementById('form-filler').innerHTML ='<p style="color:#777;margin:30px 0px; width:100%;">Amazing. Thank you for your interest in Sugar Dream Studio. I’ll be in touch soon.</p>';
     }
   var params = 'payload='+encodeURIComponent(payload)+'&';
     xmlHttp.send( params);

@@ -248,7 +248,7 @@ left:5%;
   width:500px;
 }
 }
-@media only screen and (max-device-height: 700px){
+@media screen and (max-device-height: 700px){
 .content-main .main-img{
   top:-85px;
 }
