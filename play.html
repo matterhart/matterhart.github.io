@@ -54,27 +54,10 @@
       </div>
 
   </div>
-  <div class="modal" onclick="closeModal(event)" style="display:flex;">
+  <div class="modal" onclick="closeModal(event)">
     <div class="modal-body">
         <a class="close" onclick="closeModal(event)">&times;</a>
-        <div id="form-filler">
-          <form >
-                <label for="names">Your Name:</label><input type="text" id="names" />
-                <label for="contact">Email:</label><input type="text" id="contact" />
-                <label  for="ramble">What story would you like Sugar Dream Studio to help you tell:</label><textarea rows="6" id="ramble"></textarea>
-                <label  for="daydream">What gets you out of bed in the morning:</label><textarea rows="6" id="daydream"></textarea>
-                <label class="radioLabel" for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label>
-
-                <div style="margin: 20px;width:200px;">
-                  <ul class="radioInput">
-                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>pizza</li>
-                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>hamburger</li>
-                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>burrito</li>
-                  </ul>
-                </div> 
-              <div class = "filler" style="text-align: center;">
-              <a class="btn" onclick="submitForm()">submit</a></form>
-        </div>
+        <div id="form-filler"></div>
     </div>
   </div>
 </body>

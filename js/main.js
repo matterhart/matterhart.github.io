@@ -158,8 +158,14 @@ var forms = ['<form >\
                 <label for="contact">Email:</label><input type="text" id="contact" />\
                 <label  for="ramble">What story would you like Sugar Dream Studio to help you tell:</label><textarea rows="6" id="ramble"></textarea>\
                 <label  for="daydream">What gets you out of bed in the morning:</label><textarea rows="6" id="daydream"></textarea>\
-                <label  for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label><div style="margin: 20px auto;width:200px;"><div class="select-style"><select id="songs"><option value="PIZZA">PIZZA</option><option value="HAMBURGER">HAMBURGER</option><option value="BURRITO">BURRITO</option></select></div></div> \
-              <div class = "filler" style="text-align: center;">\
+                <label class="radioLabel" for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label>\
+                <div style="margin: 20px;width:200px;">\
+                  <ul class="radioInput">\
+                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>pizza</li>\
+                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>hamburger</li>\
+                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>burrito</li>\
+                  </ul>\
+                </div> <div class = "filler" style="text-align: center;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
               '<form >\
                 <label for="names">Your Name:</label><input type="text" id="names" />\
