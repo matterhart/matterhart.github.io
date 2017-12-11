@@ -241,6 +241,22 @@ left:5%;
   position:static;
 
 }
+.radioInput{
+ list-style: none;color:#4C4C4C;
+}
+.radioInput li
+{
+  padding: 5px 0px;
+  cursor: pointer;
+}
+.radioInput .radioBtn
+{
+  width:16px;height:16px;margin:0px 5px;background-color: white;border:1px solid #4C4C4C;border-radius:50%;display: inline-block;vertical-align: text-bottom;
+}
+.radioInput .radioBtn:hover, .radioInput .selected .radioBtn
+{
+  background-color:#4C4C4C;
+}
 @media only screen and (max-device-width: 700px){
 
 .content-main .main-img

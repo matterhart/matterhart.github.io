@@ -100,10 +100,16 @@ function submitForm()
             break;
         }
     }
-    if(form.getElementsByTagName('select').length == 1)
+    if(form.getElementsByClassName('radioInput').length == 1 && form.getElementsByClassName('selected').length == 1)
     {
-        let item = form.getElementsByTagName('select')[0];
-        payload += item.value + "<br>";
+        let item = form.getElementsByClassName('selected')[0];
+        payload += item.innerText + "<br>";
+    }
+    else if(form.getElementsByClassName('radioInput').length == 1)
+    {
+        errors=true;
+        form.getElementsByClassName('radioLabel')[0].innerHTML += "<span style='color:red;font-weight:bold;'>*</span>";
+
     }
     if(!errors)
     {
@@ -122,6 +128,20 @@ function sendRequest(payload){
     }
   var params = 'payload='+encodeURIComponent(payload)+'&';
     xmlHttp.send( params);
+}
+function radioInputClick(obj,event)
+{
+  parentEle = obj.parentNode;
+  for(var i = 0;i < parentEle.children.length;i++)
+  {
+    element = parentEle.children[i];
+    if( element.tagName == 'LI')
+    {
+      element.className = '';
+    }
+  }
+
+  obj.className='selected';
 }
 var forms = ['<form >\
                 <label for="names">Your Names:</label><input type="text" id="names" />\

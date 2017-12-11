@@ -3,45 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <title>Sugar Dream Studio</title>
-    <style type="text/css">
-      
-html,body{
-width:100%;
-height:100%;
-margin:0px;
-padding:0px;
-background-color:black;
-}
-
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100%;
-}
-.container img
-{
-  width:300px;
-}
-@media only screen and (max-device-width: 700px){
-
-.container img
-{
-  width:500px;
-}
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=1212115">
   </head>
   <body>
-    <div style="position:fixed;width:100%;text-align: right; line-height: 165px;">
-      <img style="float:left;height:125px;margin:20px;" src="/img/header_logo.png" />
-            <a style="margin-right:15px;" href="mailto:hello@sugardream.studio"> <img height="30" src='/img/email.png' /></a>
-      <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='/img/insta.png' /></a>
-       <a style="margin-right:30px;" target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='/img/vimeo.png' /></a>
+    <div class="content-box" style="min-width: 700px;min-height: 770px">
+  <div class="content-header">
+          <img onclick="location.href='/'" src="./img/header_logo.png" />
+          <a href="./about">about</a>
+          <a href="./work">work</a>
+          <a href="./play">let's play</a>
+  </div>
+  <div class="content-main center" style="min-height:600px;overflow: hidden;" >
 
+    <img class="main-img" src="./img/logo_small.png"  />
+    <div class="background-mask">
+      <video playsinline autoplay muted loop poster="./img/landing.jpg" id="bgvid">
+          <source src="./img/hero.mp4" type="video/mp4">
+      </video>
     </div>
-    <div class="container">
-  <img src="/img/logo_small.png"  />
+
+  </div>
+  <div class="content-footer" style="background-color: black;z-index: 2;">
+          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
+      <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
+    
+  </div>
 </div>
   </body>
 </html>
