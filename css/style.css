@@ -251,7 +251,7 @@ left:5%;
 }
 .radioInput .radioBtn
 {
-  width:16px;height:16px;margin:0px 5px;background-color: white;border:1px solid #4C4C4C;border-radius:50%;display: inline-block;vertical-align: text-bottom;
+  width:16px;height:16px;margin:0px 5px;background-color: white;border:1px solid #4C4C4C;border-radius:50%;display: inline-block;vertical-align: middle;
 }
 .radioInput .radioBtn:hover, .radioInput .selected .radioBtn
 {
