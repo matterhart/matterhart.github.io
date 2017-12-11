@@ -150,8 +150,8 @@ var forms = ['<form >\
                 <label for="location">Wedding Location:</label><input type="text" id="location" />\
                 <label  for="ramble">Tell me about your love. Ramble to your heart\'s content:</label><textarea rows="6" id="ramble"></textarea>\
                 <label  for="daydream">When day dreaming about your wedding day, what vibe do you envision:</label><textarea rows="6" id="daydream"></textarea>\
-                <label  for="songs">Name your 3 most recently played songs:</label><textarea rows="3" id="songs"></textarea> \
-              <div class = "filler" style="text-align: center;">\
+                <label  for="songs">Name your 3 most recently played songs:</label><textarea class="triple" rows="3" id="songs"></textarea> \
+              <div class = "filler" style="text-align: center;padding-top:55px;">\
               <a class="btn" onclick="submitForm()">submit</a></form>',
               '<form >\
                 <label for="names">Your Name:</label><input type="text" id="names" />\

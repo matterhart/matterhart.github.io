@@ -3,13 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Sugar Dream Studio</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=1212115">
-    <style type="text/css">
-      //simple max-width query
-      @media screen and ( max-height: 600px ){
-          .content-box {background: blue;}
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=1.1">
   </head>
   <body>
     <div class="content-box" style="min-width:700px;min-height: 800px;">
@@ -20,33 +14,27 @@
           <a href="./play">let's play</a>
   </div>
   <div class="content-main" style="padding-bottom:70px;">
-    <table style="width:80%;margin:0px auto;flex:0 0 auto;">
+    <table style="width:80%;margin:0px auto;flex:0 0 auto;max-width:1200px">
       <tr>
           <td style="width:70%;vertical-align: top;">
             <h2>about</h2>
             <p>I’ve got a passion for emotion. For beautiful, intensified life. For moments that move you and vulnerability that makes you weak in the knees. For truth and tenderness. For the raw and the real. </p>
             <p>Taking the road less traveled and capturing life with my whole heart bring me purpose. I jive with movers, shakers, dreamers, and makers who believe in the power of sharing their stories. And I would love to help you tell yours. </p>
             <p>I film weddings, events, and any tale worth telling. Interested in making magic together?</p>
-            <div style="text-align: center;margin-top:2em;">
+            <div class="mobile-hide" style="text-align: center;margin-top:2em;">
               <a class="btn" href="./play">let's play</a>
             </div>
 
           </td>
           <td>
             <img src="./img/instax.png" style="height:350px;margin-bottom:20px" />
+            <div class="mobile-show" style="text-align: center;margin-top:2em;">
+              <a class="btn" href="./play">let's play</a>
+            </div>
           </td>
       </tr>
     </table>
-<!--     <div class="patchwork-footer">
-      <img class="patchwork-image" src="./img/about1.jpg" />
-      <img class="patchwork-image" src="./img/about2.jpg" />
-      <img class="patchwork-image" src="./img/about3.jpg"  />
-      <div class="content-footer">
-          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-          <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a> 
-      </div>
-    </div> -->
-    <div class="patchwork-footer" style="width:90%;margin:30px auto;left:0px;position:static;max-width:1200px">
+    <div class="patchwork-footer" style="width:80%;margin:30px auto;left:0px;position:static;max-width:1600px">
     
       <div style="width:33%;height:250px;display: inline-block;    background-image: url(./img/about1.jpg); background-size: cover;">      </div>
       <div style="width:33%;height:250px;display: inline-block;    background-image: url(./img/about2.jpg); background-size: cover;">      </div>

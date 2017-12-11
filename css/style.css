@@ -258,6 +258,9 @@ left:5%;
 {
   background-color:#4C4C4C;
 }
+.mobile-show{
+  display:none;
+}
 @media screen and (max-height: 700px){
 .content-main .main-img{
   top:-85px;
@@ -304,9 +307,23 @@ left:5%;
 }
 input,textarea{
   display:block;
-  font-size:32px;
+  font-size:28px;
+  line-height: 1em;
+  resize:none;
+  max-height:168px;
+}
+textarea.triple
+{
+  max-height:84px;
 }
 table img{
   height:450px !important;
+}
+.mobile-hide{
+  display:none;
+}
+.mobile-show
+{
+  display:block;
 }
 }
