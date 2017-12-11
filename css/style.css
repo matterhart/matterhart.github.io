@@ -27,7 +27,7 @@ z-index:1;
     z-index:10;
 }
 .content-header{
-    flex: 0 1 125px;
+    flex: 0 1 105px;
     text-align: right;
 }
 .content-main{
@@ -57,13 +57,13 @@ z-index:1;
 .content-header img
 {
     cursor: pointer;
-    float:left;height:105px;margin:20px 20px;
+    float:left;height:105px;margin:0px 20px;
 }
 .content-header a{
     text-decoration: none;
     display: inline-block;
     margin-right:50px;
-    line-height: 125px;
+    line-height: 105px;
     color:white;
 }
 .content-main .main-img
