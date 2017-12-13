@@ -265,6 +265,15 @@ left:5%;
 .frame-holder{
   z-index:1;
 }
+#left-arrow{
+  position:absolute;left:0px;top:250px;display:none;z-index:2;
+}
+#right-arrow{
+  position:absolute;right:0px;top:250px;
+}
+#left-arrow>div,#right-arrow>div{
+  background-color: rgba(0,0,0,0.7);cursor: pointer;padding:20px;    
+}
 @media screen and (max-height: 700px){
 .content-main .main-img{
   top:-85px;
@@ -272,6 +281,7 @@ left:5%;
 }
 
 @media only screen and (max-device-width: 700px){
+
   .content-header{
     font-size: 2em;
     text-align: center;
@@ -335,5 +345,13 @@ table img{
 .mobile-show
 {
   display:block;
+}
+#left-arrow, #right-arrow{
+  top:175px;
+}
+#left-arrow>div,#right-arrow>div
+{
+ padding:100px 20px;
+
 }
 }
