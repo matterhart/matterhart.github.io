@@ -139,7 +139,7 @@ function radioInputClick(obj,event)
 }
 var videos = [
                 ['https://player.vimeo.com/video/244116830','Aaron & Evelyn &bull; Seattle'],
-                ['https://player.vimeo.com/video/247013095','Grace & Blooms &bull; Seattle'],
+                ['https://player.vimeo.com/video/247013095','Maker Muse Series: Grace & Blooms'],
                 ['https://player.vimeo.com/video/243380169','Fremonster Spectacular &bull; Seattle']
 ];
 var forms = ['<form >\
