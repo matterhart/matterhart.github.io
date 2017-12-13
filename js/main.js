@@ -1,54 +1,48 @@
 var interval;
-var margin;
-var mulit;
+var opacity;
+var multi;
+var index = 0;
 function goright(){
-    margin = 1;
-    multi = -1;
-    interval = setInterval(function(){ animateRight()},20);
-    document.getElementById('right-arrow').style.display="none";
+    if(index + 1 < videos.length){
+        index++;
+        opacity = 1;
+        multi = -1;
+        document.getElementById('left-arrow').style.display="block";
+        interval = setInterval(function(){ animate()},20);
+        if(index >= videos.length -1) {
+            document.getElementById('right-arrow').style.display="none";
+        }
+    }
     
 }
-
-function animateRight(){
-    margin += multi*0.05;
-    document.getElementsByClassName('frameHolder')[0].style.opacity= margin;
-    if(margin <= 0){
+function animate(){
+    opacity += multi*0.05;
+    document.getElementsByClassName('frameHolder')[0].style.opacity= opacity;
+    if(opacity <= 0){
         multi = 1;
         clearInterval(interval);
-        document.getElementById('subtitle').innerHTML = "Fremonster Spectacular &bull; Seattle";
+        document.getElementById('subtitle').innerHTML = videos[index][1];
         var frame = document.getElementsByTagName('iframe')[0];
-        frame.onload = function () {interval = setInterval(function(){ animateRight()},20);};
-        frame.src="https://player.vimeo.com/video/243380169?title=0&byline=0&portrait=0";
+        frame.onload = function () {interval = setInterval(function(){ animate()},20);};
+        frame.src=videos[index][0]+"?title=0&byline=0&portrait=0";
     }
-    if(margin >= 1)
-    {
-        document.getElementById('left-arrow').style.display="block";
-        clearInterval(interval);
-    }
-}
-function animateLeft(){
-    margin += multi*0.05;
-    document.getElementsByClassName('frameHolder')[0].style.opacity= margin;
-    if(margin <= 0){
-        multi = 1;
-        clearInterval(interval);
-        document.getElementById('subtitle').innerHTML = "Aaron & Evelyn &bull; Seattle";
-        var frame = document.getElementsByTagName('iframe')[0];
-        frame.onload = function () {interval = setInterval(function(){ animateLeft()},20);};
-        frame.src="https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0";
-    }
-    if(margin >= 1)
-    {
-        document.getElementById('right-arrow').style.display="block";
+    if(opacity >= 1)
+    {   
         clearInterval(interval);
     }
 }
 
 function goleft(){
-    margin = 1;
-    multi = -1;
-    interval = setInterval(function(){ animateLeft()},20);
-    document.getElementById('left-arrow').style.display="none";
+    if(index-1 >= 0){
+        index--;
+        opacity = 1;
+        multi = -1;
+        document.getElementById('right-arrow').style.display="block";
+        interval = setInterval(function(){ animate()},20);
+        if(index == 0){
+            document.getElementById('left-arrow').style.display="none";
+        }
+    }
 }
 
 function toggleForms()
@@ -143,6 +137,11 @@ function radioInputClick(obj,event)
 
   obj.className='selected';
 }
+var videos = [
+                ['https://player.vimeo.com/video/244116830','Aaron & Evelyn &bull; Seattle'],
+                ['https://player.vimeo.com/video/247013095','Grace & Blooms &bull; Seattle'],
+                ['https://player.vimeo.com/video/243380169','Fremonster Spectacular &bull; Seattle']
+];
 var forms = ['<form >\
                 <label for="names">Your Names:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\

@@ -261,6 +261,10 @@ left:5%;
 .mobile-show{
   display:none;
 }
+
+.frame-holder{
+  z-index:1;
+}
 @media screen and (max-height: 700px){
 .content-main .main-img{
   top:-85px;
