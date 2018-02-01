@@ -56,13 +56,13 @@ z-index:1;
 .content-header img
 {
     cursor: pointer;
-    float:left;height:105px;margin:0px 20px;
+    float:left;height:105px;margin:5px 20px;
 }
 .content-header a{
     text-decoration: none;
     display: inline-block;
     margin-right:50px;
-    line-height: 105px;
+    line-height: 115px;
     color:white;
 }
 .content-main .main-img
