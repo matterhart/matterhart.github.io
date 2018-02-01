@@ -10,12 +10,12 @@ height:100%;
 margin:0px;
 padding:0px;
 color:white;    
-background-color:black;
+background-color:#1e535c;
 z-index:1;  
 }
 
 .container{
-  
+
   height:100%;
   position:relative;
 }
@@ -48,8 +48,7 @@ z-index:1;
   bottom:0px;
   height:70px;
   width:100%;
-  background-color: black;
-    /*flex: 0 1 70px;*/
+  background-color: #1e535c;
     text-align: center;
     line-height: 70px;
     font-size: 0px;
@@ -98,7 +97,7 @@ a.btn:hover{
     border: 1px solid #fff;
     width: 120px;
     overflow: hidden;
-    background-color:black;
+    background-color:#1e535c;
     display:inline-block;
     vertical-align: middle;
     padding-left:50px;
@@ -140,7 +139,6 @@ textarea{
 input,textarea{
   border:none;
     border-bottom:1px solid #D9D9D9;
-    /*background-color:#D9D9D9;*/
     font-size:18px;
     color:#4C4C4C;
     line-height: 1.25em;
