@@ -10,7 +10,7 @@ height:100%;
 margin:0px;
 padding:0px;
 color:white;    
-background-color:#1e535c;
+background-color:#1B3840;
 z-index:1;  
 }
 
@@ -48,7 +48,7 @@ z-index:1;
   bottom:0px;
   height:70px;
   width:100%;
-  background-color: #1e535c;
+  background-color: #1B3840;
     text-align: center;
     line-height: 70px;
     font-size: 0px;
@@ -97,7 +97,7 @@ a.btn:hover{
     border: 1px solid #fff;
     width: 120px;
     overflow: hidden;
-    background-color:#1e535c;
+    background-color:#1B3840;
     display:inline-block;
     vertical-align: middle;
     padding-left:50px;
