@@ -1,50 +1,3 @@
-var interval;
-var opacity;
-var multi;
-var index = 0;
-function goright(){
-    if(index + 1 < videos.length){
-        index++;
-        opacity = 1;
-        multi = -1;
-        document.getElementById('left-arrow').style.display="block";
-        interval = setInterval(function(){ animate()},20);
-        if(index >= videos.length -1) {
-            document.getElementById('right-arrow').style.display="none";
-        }
-    }
-    
-}
-function animate(){
-    opacity += multi*0.05;
-    document.getElementsByClassName('frameHolder')[0].style.opacity= opacity;
-    if(opacity <= 0){
-        multi = 1;
-        clearInterval(interval);
-        document.getElementById('subtitle').innerHTML = videos[index][1];
-        var frame = document.getElementsByTagName('iframe')[0];
-        frame.onload = function () {interval = setInterval(function(){ animate()},20);};
-        frame.src=videos[index][0]+"?title=0&byline=0&portrait=0";
-    }
-    if(opacity >= 1)
-    {   
-        clearInterval(interval);
-    }
-}
-
-function goleft(){
-    if(index-1 >= 0){
-        index--;
-        opacity = 1;
-        multi = -1;
-        document.getElementById('right-arrow').style.display="block";
-        interval = setInterval(function(){ animate()},20);
-        if(index == 0){
-            document.getElementById('left-arrow').style.display="none";
-        }
-    }
-}
-
 function toggleForms()
 {
     document.getElementsByClassName('modal')[0].style.display="flex";
@@ -64,6 +17,18 @@ function toggleForms()
             document.getElementById('form-filler').innerHTML = forms[3];
         break;
     }
+}
+function openPlayback(src,title,imgsrc)
+{
+    var frame = document.getElementsByTagName('iframe')[0];
+    document.getElementsByClassName('video_subtitle')[0].innerHTML=title;
+    frame.style.background="url("+imgsrc+")";
+    frame.style.backgroundSize = 'contain';
+    frame.src = src;
+    //frame.onload = function (){};
+    document.getElementsByClassName('modal')[0].style.display="flex";
+    
+    
 }
 function closeModal(e){
     if(e.target.className == "modal" || e.target.className == "close"){
@@ -137,11 +102,7 @@ function radioInputClick(obj,event)
 
   obj.className='selected';
 }
-var videos = [
-                ['https://player.vimeo.com/video/244116830','Aaron & Evelyn &bull; Seattle'],
-                ['https://player.vimeo.com/video/247013095','Maker Muse Series: Grace & Blooms'],
-                ['https://player.vimeo.com/video/243380169','Fremonster Spectacular &bull; Seattle']
-];
+
 var forms = ['<form >\
                 <label for="names">Your Names:</label><input type="text" id="names" />\
                 <label for="contact">Email:</label><input type="text" id="contact" />\

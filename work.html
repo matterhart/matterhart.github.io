@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Sugar Dream Studio</title>
-  <link rel="stylesheet" type="text/css" href="./css/style.css?v=1.6">
-  <script type="text/javascript" src="./js/main.js?v=1.4"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css?v=1.7">
+  <script type="text/javascript" src="./js/main.js?v=1.5"></script>
 </head>
-
 <body>
   <div class="content-box" style="min-width:1024px;min-height:900px;">
     <div class="content-header">
@@ -16,38 +15,38 @@
       <a href="./work">work</a>
       <a href="./play">let's play</a>
     </div>
-    <div class="content-main center" style="position: relative;">
+    <div class="content-main center" style="position: relative;text-align:center;display:block">
        
+       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/253885938?title=0&byline=0&portrait=0','Josh & Nate &bull; Seattle','./img/JoshNate.png')">
+         <img src="./img/JoshNate.png" />
+       </div>
+       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/247013095?title=0&byline=0&portrait=0','Maker Muse Series: Grace & Blooms','./img/GraceBlooms.png')">
+         <img src="./img/GraceBlooms.png" />
+       </div>
+       <br>
+       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0','Aaron & Evelyn &bull; Seattle','./img/AaronEvelyn.png')">
+         <img src="./img/AaronEvelyn.png" />
+       </div>
+       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/243380169?title=0&byline=0&portrait=0','Fremonster Spectacular &bull; Seattle','./img/Fremonster.png')">
+         <img src="./img/Fremonster.png" />
+       </div>
 
-      <div style="height:649px;flex: 0 0 auto;position:relative;align-self: center;">
 
-        <div id="left-arrow" onclick="goleft()">
-        <div style="border-top-right-radius: 20px;border-bottom-right-radius: 20px;">
-          <img style="width:75px;vertical-align: middle;" src="./img/ArrowLeft.png" />
-        </div>
+      <div class="content-footer" style="z-index: 2;position:absolute;left:0px;"">
+        <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
+        <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a> 
       </div>
-
-        <div class="frameHolder" >
-          <iframe style="" src="https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0" width="1024" height="576" frameborder="0"
-            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <div style="text-align:center;padding:20px;" id="subtitle">Aaron & Evelyn &bull; Seattle</div>
-        </div>
-
-        <div id="right-arrow" onclick="goright()">
-          <div style="border-top-left-radius: 20px;border-bottom-left-radius: 20px;">
-            <img style="width:75px;vertical-align: middle;" src="./img/Arrow.png" />
-          </div>
-        </div>
-
-      </div>
-
- <div class="content-footer" style="z-index: 2;position:absolute;left:0px;"">
-      <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-      <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a> 
     </div>
-    </div>
-   
   </div>
+<div class="modal" onclick="closeModal(event)" style="z-index:3">
+  <div class="modal-body" style="width:auto;left:auto;padding:40px;padding-bottom:0px;top:100px;">
+      <a class="close mobile-hide" onclick="closeModal(event)">&times;</a>
+         <iframe style="background-color:#4C4C4C;" src="" width="1024" height="576" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <div style="text-align:center;padding:20px;color:#4C4C4C;" id="subtitle" class="video_subtitle"></div>
+
+  </div>
+</div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113391201-1"></script>
 <script>

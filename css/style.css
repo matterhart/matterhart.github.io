@@ -272,6 +272,20 @@ left:5%;
 #left-arrow>div,#right-arrow>div{
   background-color: rgba(0,0,0,0.7);cursor: pointer;padding:20px;    
 }
+.viewbox{
+  cursor: pointer;
+  display:inline-block;
+  width:25%;
+  margin:20px;
+}
+.viewbox img{
+  width: 100%;
+}
+.viewbox img:hover{
+  -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
 @media screen and (max-height: 700px){
 .content-main .main-img{
   top:-85px;
@@ -344,12 +358,11 @@ table img{
 {
   display:block;
 }
-#left-arrow, #right-arrow{
-  top:175px;
-}
-#left-arrow>div,#right-arrow>div
+.viewbox
 {
- padding:100px 20px;
-
+  width:80%;
+}
+iframe {
+  max-width: 100%;
 }
 }
