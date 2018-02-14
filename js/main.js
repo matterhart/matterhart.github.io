@@ -21,6 +21,7 @@ function toggleForms()
 function openPlayback(src,title,imgsrc)
 {
     var frame = document.getElementsByTagName('iframe')[0];
+    frame.src = "";
     document.getElementsByClassName('video_subtitle')[0].innerHTML=title;
     frame.style.background="url("+imgsrc+")";
     frame.style.backgroundSize = 'contain';
