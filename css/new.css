@@ -3,11 +3,23 @@
     src: url("Brandon_reg.otf") format("opentype");
 }
 @font-face {
+    font-family: Brandon-thin;
+    src: url("Brandon_thin.otf") format("opentype");
+}
+@font-face {
+    font-family: Brandon-thin-it;
+    src: url("Brandon_thin-it.otf") format("opentype");
+}
+@font-face {
     font-family: KDS;
     src: url("KbdSans-Regular.otf") format("opentype");
 }
 @font-face {
     font-family: Libre;
+    src: url("LibreBaskerville-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: Libre-italic;
     src: url("LibreBaskerville-Italic.otf") format("opentype");
 }
 html,body{
@@ -50,9 +62,6 @@ a{
     vertical-align: middle;
     height:200px;
     cursor: pointer;
-}
-.content-header.subpage img{
-    height:150px;
 }
 .content-main.center{
     text-align: center;
@@ -236,7 +245,9 @@ form a.btn:hover{
 }
 .display-rotator{
     display: table;
-    height:100%;
+    padding-top:1em;
+    height:calc(100% - 1em);
+    width:100%;
 }
 div.rotate-btn{
     display:table-cell;
@@ -252,6 +263,24 @@ div.rotator{
     opacity: 0;
     color:white;
     position: relative;
+    padding-top: 1em; 
+}
+
+div.rotator p{
+    font-family: Libre;
+    font-size: 0.85em;
+    line-height: 1.75em;
+}
+div.rotator .italic{
+    font-family: Brandon-thin;
+    font-size: 1.2em;
+}
+div.rotator .italic.small {
+    text-align: right;
+    font-size:1em;
+}
+div.rotator p i{
+    font-family: Libre-italic;
 }
 div.rotator.selected{
     display:table-cell;
@@ -264,15 +293,14 @@ div.rotator > div{
     position:absolute;
     left:5%;
     width:70%;
-    top:20%;
-    padding: 20px;
+    top:40%;
+    padding: 20px 30px;
     text-align: left;
     background-color: rgba(30,83,92,0.5);
     border-radius: 20px;
 }
 div.rotator .italic {
-    font-family: KDS;
-    font-size: 1.6em;
+    /*font-size: 1.6em;*/
 }
 div.rotator > div a{
     font-weight:bold;
@@ -328,6 +356,7 @@ div.rotator > div a{
   .display-rotator{
     display: block;
     width: 100%;
+    padding-top:0px;
 }
 div.rotate-btn{
     display:none;
@@ -350,6 +379,13 @@ div.rotator,div.rotator.selected{
     opacity: 1;
     background:none !important;
 }
+div.rotator.selected{
+    padding-top:0px;
+}
+div.rotator .italic.small {
+    margin-top: 0.5em;
+    margin-bottom: 1em; 
+    }
   .content-main .subheader .line{
     width:100%;
   }
@@ -409,7 +445,7 @@ iframe {
     text-align: center;
   }
   .content-main .two-column > div{
-    width:80%;
+    width:100%;
     margin:auto !important;
   }
 .viewbox
@@ -419,7 +455,9 @@ iframe {
 .display-rotator{
     display: block;
     width: 100%;
+     padding-top:0px;
 }
+
 div.rotate-btn{
     display:none;
 }
@@ -431,6 +469,7 @@ div.rotator > div{
     background:none;
     border-radius: 0px  ;
     border-bottom:1px solid #1e535c;
+    width: 80%;
 }
 div.rotator, div.rotator > div a{
     color:#000;
@@ -441,6 +480,14 @@ div.rotator,div.rotator.selected{
     opacity: 1;
     background:none !important;
 }
+div.rotator .italic.small {
+    margin-top: 0.5em;
+    margin-bottom: 1em; 
+    }
+div.rotator.selected{
+    padding-top:0px;
+}
+
 .content-footer{
     position:static;
 }
