@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Sugar Dream Studio</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=1.7">
-  </head>
-  <body>
-    <div class="content-box" style="min-width: 700px;min-height: 770px">
-  <div class="content-header">
-          <img onclick="location.href='/'" src="./img/header_logo.png" />
-          <a href="./about">about</a>
-          <a href="./work">work</a>
-          <a href="./play">let's play</a>
-  </div>
-  <div class="content-main center" style="min-height:600px;overflow: hidden;" >
+    <link rel="stylesheet" type="text/css" href="./css/new.css?v=1.1">
+    <style type="text/css">
+      #bgvid{
+             height:100%;
+             width: 100%;
+             object-fit:cover;
+          }
+    </style>
+</head>
 
-    <img class="main-img" src="./img/logo_small.png"  />
-    <div class="background-mask">
-      <video playsinline autoplay muted loop poster="./img/landing.jpg" id="bgvid">
+<body>
+    <div class="content-box">
+        <div class="content-header">
+            <a href="./about">about</a>
+            <a href="./videos">videos</a>
+            <img onclick="location.href='/'" src="./img/SDS_Spoon_Logo_White.png" />
+            <a href="./reviews">reviews</a>
+            <a href="./contact">contact</a>
+        </div>
+        <div class="content-main center" style="min-height:600px;">
+            <div class="background-mask">
+                <video playsinline autoplay muted loop poster="./img/landing.jpg" id="bgvid">
           <source src="./img/hero.mp4" type="video/mp4">
       </video>
+            </div>
+            <img class="main-img" src="./img/logo_small.png" />
+
+
+        </div>
+        <div class="content-footer" style="position: absolute;">
+            <a target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img src='./img/insta_8ba5ab.png' /></a>
+            <a target="_blank" href="https://vimeo.com/sugardreamstudio"> <img src='./img/vimeo_8ba5ab.png' /></a>
+            <br>
+            <a style="font-size:0.80em"; href="mailto:hello@sugardream.studio">hello@sugardream.studio</a>
+
+        </div>
     </div>
-
-  </div>
-  <div class="content-footer" style="z-index: 2;">
-          <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-      <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a>
-    
-  </div>
-</div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113391201-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-113391201-1');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113391201-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-113391201-1');
     </script>
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sugar Dream Studio</title>
+    <link rel="stylesheet" type="text/css" href="./css/new.css?v=1.1">
+    <script type="text/javascript" src="./js/main.js?v=1.7"></script>
+    <style type="text/css">
+      body{
+        overflow: auto;
+      }
+    </style>
+  </head>
+<body>
+     <div class="content-box subpage" style="height:auto;">
+    <div class="content-header subpage">
+            <a href="./about">about</a>
+            <a href="./videos">videos</a>
+            <img onclick="location.href='/'" src="./img/SDS_Spoon_93A8AC.png" />
+            <a  href="./reviews">reviews</a>
+            <a class='selected' href="./contact">contact</a>
+        </div>
+    <div class="content-main">
+      <div style="max-width: 1200px;margin:auto;">
+      <div class="subheader" >
+        <div class="line"></div>
+        <span>LET'S PLAY</span>
+        <div class="line"></div>
+      </div>
+      <div class="two-column">
+        <div>
+          <p>So you’re curious about working together? That’s fantastic.
+              Tell me everything. Or keep it simple. You do you. 
+              And for goodness sake: don’t apologize for it.</p>
+          <form >
+                <label for="name">your full name</label>
+                <div class="input-wrap"><input type="text" id="name" /></div>
+                <label for="contact">email address</label>
+                <div class="input-wrap"><input type="text" id="contact" /></div> 
+                <label for="do-for-you">what can sugar dream studio capture for you?</label>
+                <div class="input-wrap"><input type="text" id="do-for-you" /></div>
+                <div style="width:25%" class="formHolder">
+                  <label for="event-date">event date</label>
+                  <div class="input-wrap"><input onkeydown="return numberOnly(event);" maxlength="10" onkeyup="return formatNumber(this,event);" type="text" id="event-date" /></div>
+                </div>
+                <div style="width:70%" class="formHolder">
+                  <label  for="event-locale">event location</label>
+                  <div class="input-wrap"><input type='text' id="event-locale"/></div>
+                </div>
+                <label  for="ramble">tell me about the vibe you envision for your video. <br>ramble to your heart's content!</label>
+                <div class="input-wrap"><textarea rows="6" id="ramble"></textarea></div>
+                <label  for="songs">name your three most recently played songs</label>
+                <div class="input-wrap"><textarea rows="6" id="songs"></textarea> </div>
+              <div class = "filler" style="text-align: center;padding-top:25px;">
+              <a class="btn" onclick="submitForm()">submit</a>
+            </div>
+            </form>
+        </div>
+        <div>
+          <img style="width:100%;margin-top:1em;" src="./img/contact1.jpg" /><br>
+          <img style="width:100%;" src="./img/contact2.jpg" /><br>
+          <img style="width:100%;" src="./img/contact3.jpg" />
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="content-footer flexi">
+            <a target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img src='./img/insta_8ba5ab.png' /></a>
+            <a target="_blank" href="https://vimeo.com/sugardreamstudio"> <img src='./img/vimeo_8ba5ab.png' /></a>
+            <br>
+            <a style="font-size:0.80em"; href="mailto:hello@sugardream.studio">hello@sugardream.studio</a>
+
+    </div>
+  </div>    
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113391201-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113391201-1');
+</script>
+</body>
+</html>

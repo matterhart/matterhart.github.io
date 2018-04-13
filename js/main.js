@@ -1,22 +1,24 @@
-function toggleForms()
-{
-    document.getElementsByClassName('modal')[0].style.display="flex";
-    var form = document.getElementsByTagName('select')[0];
-    switch(form.value)
-    {
-        case 'WEDDING':
-            document.getElementById('form-filler').innerHTML = forms[0];
-        break;
-        case 'DOCUSHORT':
-            document.getElementById('form-filler').innerHTML = forms[1];
-        break;
-        case 'EVENT':
-            document.getElementById('form-filler').innerHTML = forms[2];
-        break;
-        case 'OTHER':
-            document.getElementById('form-filler').innerHTML = forms[3];
-        break;
+function numberOnly(event){
+    return !!Number.parseInt(event.key) || event.key==='0' || event.key==='Backspace' || event.key == 'Tab';
+}
+function formatNumber(obj, event){
+    if(numberOnly(event) && !!Number.parseInt(event.key)){
+        var val = (String(obj.value)).replace(/[^\d]/gi,'');
+        var arr = val.split('');
+        val = [arr.slice(0,2).join(''),arr.slice(2,4).join(''),arr.slice(4,8).join('')].join('-');
+        switch(arr.length){
+            case 1:case 2:
+                obj.value= val.slice(0,arr.length);
+            break;
+            case 3:
+                obj.value= val.slice(0,arr.length+1);
+            break;
+            default:
+                obj.value= val.slice(0,arr.length+2);
+        }
+        return true;
     }
+    return false;
 }
 function openPlayback(src,title,imgsrc)
 {
@@ -28,9 +30,39 @@ function openPlayback(src,title,imgsrc)
     frame.src = src;
     //frame.onload = function (){};
     document.getElementsByClassName('modal')[0].style.display="flex";
-    
-    
 }
+var interval;
+var rotatorsDOM;
+var selected;
+var index;
+
+function rotate(direction){
+    rotatorsDOM = document.getElementsByClassName('rotator');
+    selected = document.getElementsByClassName('rotator selected')[0];
+    index = Array.from(rotatorsDOM).indexOf(selected);
+    selected.style.opacity = 1;
+    index = (rotatorsDOM.length + (index+direction) )%rotatorsDOM.length;
+    interval = setInterval(function(){ fadeAnimate(-0.15, swapImage)},20);
+}
+function swapImage(){
+    selected.className = 'rotator';
+    selected = rotatorsDOM.item(index);
+    selected.className = 'rotator selected';
+    selected.style.opacity = 0;
+    interval = setInterval(function(){ fadeAnimate(0.15)},20);
+}
+function fadeAnimate(delta, callback){
+    var setOpacity = parseFloat(selected.style.opacity)+delta;
+    if(setOpacity < 0 || setOpacity > 1){
+        
+        clearInterval(interval);
+        if( typeof callback == 'function'){
+            callback();
+        }
+    }
+    selected.style.opacity = setOpacity;
+}
+
 function closeModal(e){
     if(e.target.className == "modal" || e.target.className == "close"){
     document.getElementsByClassName('modal')[0].style.display="none";}
@@ -43,33 +75,32 @@ function submitForm()
     for( i = 0; i<form.children.length; i++)
     {
         let item = form.children[i];
-        switch(item.tagName){
-            case 'LABEL':
-                payload += item.innerText+' ';
-            break;
-            case 'INPUT': case 'TEXTAREA':
-                if(item.value.trim() != "")
-                {
-                    payload += item.value+"<br>";
-                }
-                else
-                {
-                    form.children[i-1].innerHTML += "<span style='color:red;font-weight:bold;'>*</span>";
-                    errors = true;
-                }
-            break;
-        }
-    }
-    if(form.getElementsByClassName('radioInput').length == 1 && form.getElementsByClassName('selected').length == 1)
-    {
-        let item = form.getElementsByClassName('selected')[0];
-        payload += item.innerText + "<br>";
-    }
-    else if(form.getElementsByClassName('radioInput').length == 1)
-    {
-        errors=true;
-        form.getElementsByClassName('radioLabel')[0].innerHTML += "<span style='color:red;font-weight:bold;'>*</span>";
+        let labelItem = form.children[i-1]
+        if( item.tagName == 'DIV'){
+            let subItem = item.children[0];
+            if(item.className == 'formHolder')
+            {
+                subItem = item.children[1].children[0];
+                labelItem = item.children[0];
+            }
 
+            switch(subItem.tagName){
+                case 'LABEL':
+                    payload += subItem.innerText+' ';
+                break;
+                case 'INPUT': case 'TEXTAREA':
+                    if(subItem.value.trim() != "")
+                    {
+                        payload += subItem.value+"<br>";
+                    }
+                    else
+                    {
+                        labelItem.innerHTML += "<span style='color:red;font-weight:bold;'>*</span>";
+                        errors = true;
+                    }
+                break;
+            }
+        }
     }
     if(!errors)
     {
@@ -84,58 +115,8 @@ function sendRequest(payload){
     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xmlHttp.onload = function() {
-        document.getElementById('form-filler').innerHTML ='<p style="color:#777;margin:30px 0px; width:100%;">Amazing. Thank you for your interest in Sugar Dream Studio. I’ll be in touch soon.</p>';
+        document.getElementsByTagName('form')[0].innerHTML ='<p style="text-align:center;text-transform:none;">Amazing. Thank you for your interest in Sugar Dream Studio. I’ll be in touch soon.</p>';
     }
   var params = 'payload='+encodeURIComponent(payload)+'&';
     xmlHttp.send( params);
 }
-function radioInputClick(obj,event)
-{
-  parentEle = obj.parentNode;
-  for(var i = 0;i < parentEle.children.length;i++)
-  {
-    element = parentEle.children[i];
-    if( element.tagName == 'LI')
-    {
-      element.className = '';
-    }
-  }
-
-  obj.className='selected';
-}
-
-var forms = ['<form >\
-                <label for="names">Your Names:</label><input type="text" id="names" />\
-                <label for="contact">Email:</label><input type="text" id="contact" />\
-                <label for="dates">Wedding Date:</label><input type="text" id="dates" />\
-                <label for="location">Wedding Location:</label><input type="text" id="location" />\
-                <label  for="ramble">Tell me about your love. Ramble to your heart\'s content:</label><textarea rows="6" id="ramble"></textarea>\
-                <label  for="daydream">When day dreaming about your wedding day, what vibe do you envision:</label><textarea rows="6" id="daydream"></textarea>\
-                <label  for="songs">Name your 3 most recently played songs:</label><textarea class="triple" rows="3" id="songs"></textarea> \
-              <div class = "filler" style="text-align: center;padding-top:55px;">\
-              <a class="btn" onclick="submitForm()">submit</a></form>',
-              '<form >\
-                <label for="names">Your Name:</label><input type="text" id="names" />\
-                <label for="contact">Email:</label><input type="text" id="contact" />\
-                <label  for="ramble">What story would you like Sugar Dream Studio to help you tell:</label><textarea rows="6" id="ramble"></textarea>\
-                <label  for="daydream">What gets you out of bed in the morning:</label><textarea rows="6" id="daydream"></textarea>\
-                <label class="radioLabel" for="songs">Team Pizza. Team Hamburger. Or Team Burrito. Pick one:</label>\
-                <div style="margin: 20px;width:300px;">\
-                  <ul class="radioInput">\
-                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>pizza</li>\
-                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>hamburger</li>\
-                    <li onclick="radioInputClick(this,event)"><div class="radioBtn"></div>burrito</li>\
-                  </ul>\
-                </div> <div class = "filler" style="text-align: center;">\
-              <a class="btn" onclick="submitForm()">submit</a></form>',
-              '<form >\
-                <label for="names">Your Name:</label><input type="text" id="names" />\
-                <label for="contact">Email:</label><input type="text" id="contact" />\
-                <label  for="desc">Event Name & Description:</label><textarea rows="6" id="desc"></textarea>\
-                <label for="dates">Event Date:</label><input type="text" id="dates" />\
-                <label for="location">Event Location:</label><input type="text" id="location" />\
-                <label  for="ramble">What about Sugar Dream studio has piqued your interest:</label><textarea rows="6" id="ramble"></textarea>\
-              <div class = "filler" style="text-align: center;">\
-              <a class="btn" onclick="submitForm()">submit</a></form>',
-              '<p style="color:#777;margin:30px 0px; width:100%;">Hey, ya know what? Just email me at <a style="color:#777;text-decoration:none;font-weight: bold;" href="mailto:hello@sugardream.studio">hello@sugardream.studio</a> :)<br>I look forward to chatting with you!</p>'
-              ];

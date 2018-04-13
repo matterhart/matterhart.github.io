@@ -4,57 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Sugar Dream Studio</title>
-  <link rel="stylesheet" type="text/css" href="./css/style.css?v=1.7">
-  <script type="text/javascript" src="./js/main.js?v=1.6"></script>
+  <link rel="stylesheet" type="text/css" href="./css/new.css?v=1.1">
+  <script type="text/javascript" src="./js/main.js?v=1.7"></script>
 </head>
 <body>
-  <div class="content-box">
-    <div class="content-header">
-      <img onclick="location.href='/'" src="./img/header_logo.png" />
-      <a href="./about">about</a>
-      <a href="./work">work</a>
-      <a href="./play">let's play</a>
-    </div>
+   <div class="content-box subpage">
+    <div class="content-header subpage">
+            <a href="./about">about</a>
+            <a class='selected' href="./videos">videos</a>
+            <img onclick="location.href='/'" src="./img/SDS_Spoon_93A8AC.png" />
+            <a href="./reviews">reviews</a>
+            <a href="./contact">contact</a>
+        </div>
     <div class="content-main center" style="position: relative;text-align:center;display:block">
+      <div style="max-width: 1200px;margin:auto;">
+      <div class="subheader">
+        <div class="line"></div>
+      </div>
       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/260083768?title=0&byline=0&portrait=0','Maker Muse Series: The Loft of Elizabeth Zuluaga','./img/TheLoftofLiz.png')">
          <img src="./img/TheLoftofLiz.png" />
        </div>
-      <br>
       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/258103649?title=0&byline=0&portrait=0','Sara & Jes &bull; Seattle 2018','./img/SaraJes.png')">
          <img src="./img/SaraJes.png" />
-       </div>
+       </div><br>
        <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/257034148?title=0&byline=0&portrait=0','More is More &bull; Weddings in Woodinville 2018','./img/WIW_web.png')">
          <img src="./img/WIW_web.png" />
        </div>
-      <br>
-       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/253885938?title=0&byline=0&portrait=0','Josh & Nate &bull; Seattle','./img/JoshNate.png')">
+        <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/253885938?title=0&byline=0&portrait=0','Josh & Nate &bull; Seattle','./img/JoshNate.png')">
          <img src="./img/JoshNate.png" />
-       </div>
+       </div><br>
        <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/247013095?title=0&byline=0&portrait=0','Maker Muse Series: Grace & Blooms','./img/GraceBlooms.png')">
          <img src="./img/GraceBlooms.png" />
        </div>
-       <br>
+       
        <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/244116830?title=0&byline=0&portrait=0','Aaron & Evelyn &bull; Seattle','./img/AaronEvelyn.png')">
          <img src="./img/AaronEvelyn.png" />
        </div>
-       <div class="viewbox" onclick="openPlayback('https://player.vimeo.com/video/243380169?title=0&byline=0&portrait=0','Fremonster Spectacular &bull; Seattle','./img/Fremonster.png')">
-         <img src="./img/Fremonster.png" />
-       </div>
-
-
-      <div class="content-footer" style="z-index: 2;position:static;left:0px;"">
-        <a style="margin-right:15px;" target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img height="30" src='./img/insta.png' /></a>
-        <a  target="_blank" href="https://vimeo.com/sugardreamstudio"> <img height="30" src='./img/vimeo.png' /></a> 
-      </div>
-    </div>
+     </div>
   </div>
-<div class="modal" onclick="closeModal(event)" style="z-index:3">
-  <div class="modal-body" style="width:auto;left:auto;padding:40px;padding-bottom:0px;top:100px;">
+      <div class="content-footer">
+            <a target="_blank" href="https://www.instagram.com/sugardreamstudio/"> <img src='./img/insta_8ba5ab.png' /></a>
+            <a target="_blank" href="https://vimeo.com/sugardreamstudio"> <img src='./img/vimeo_8ba5ab.png' /></a>
+            <br>
+            <a style="font-size:0.80em"; href="mailto:hello@sugardream.studio">hello@sugardream.studio</a>
+
+    </div>
+    <div class="modal" onclick="closeModal(event)" style="z-index:3">
+  <div class="modal-body" style="padding:40px;padding-bottom:0px;top:100px;">
       <a class="close" onclick="closeModal(event)">&times;</a>
          <iframe style="background-color:#4C4C4C;" src="" width="1024" height="576" frameborder="0"
             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <div style="text-align:center;padding:20px;color:#4C4C4C;" id="subtitle" class="video_subtitle"></div>
-
   </div>
 </div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
