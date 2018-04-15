@@ -443,7 +443,7 @@ iframe {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
   .content-main .main-img{
-    margin-top:-2em; !important;
+    margin-top:-2em !important;
     }
 }
 
