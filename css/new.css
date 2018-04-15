@@ -351,6 +351,7 @@ div.rotator > div a{
   }
     div.display-rotator{
         min-height:500px;
+    }
 }
 @media (max-width: 965px){
     html,body{
