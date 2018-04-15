@@ -341,6 +341,9 @@ div.rotator > div a{
         margin-top:2em;
         height:300px
     }
+    .content-header.subpage img{
+        height:150px;
+    }
     .content-main .image-mural{
         height:200px;
     }
