@@ -348,7 +348,8 @@ div.rotator > div a{
     .content-box.subpage .content-footer{
     position:static ;
   }
-    
+    div.display-rotator{
+        min-height:500px;
 }
 @media (max-width: 965px){
     html,body{
