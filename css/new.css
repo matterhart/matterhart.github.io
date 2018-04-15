@@ -438,6 +438,11 @@ iframe {
 }
 
 }
+@media only screen and (aspect-ratio: 16/9) {
+  .content-main .main-img{
+    margin-top:none !important;
+    }
+}
 
 @media only screen and (max-device-width: 800px){
     html,body{
@@ -460,6 +465,7 @@ iframe {
   }
   .content-main .main-img{
     height:50%;
+      margin-top:30%;
   }
   .content-main .background-mask{
     height:calc(100% - 122px);
