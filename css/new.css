@@ -472,7 +472,6 @@ iframe {
     height:calc(100% - 122px);
   }
   .modal-body{
-    width:100%;
     left:0px;
   }
   .two-column{
