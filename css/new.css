@@ -333,11 +333,17 @@ div.rotator > div a{
 
 @media (max-height:750px){
       html,body{
-        overflow: auto;   }
+        overflow: auto;   
+        font-size:16px
+    }
     .content-main .main-img {
         margin-top:2em;
         height:300px
     }
+    .image-mural{
+        height:200px;
+    .content-main{
+        height:auto;
     .content-footer{
     position:static !important;
   }
