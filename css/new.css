@@ -525,7 +525,7 @@ div.rotator.selected{
     position:static;
 }
 iframe {
-  max-width: 100%;
+  max-width: 90%;
   background:none !important;
 }
 
