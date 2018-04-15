@@ -345,8 +345,8 @@ div.rotator > div a{
     }
     .content-main{
         height:auto;}
-    .content-footer{
-    position:static !important;
+    .conent-box.subpage .content-footer{
+    position:static ;
   }
     
 }
