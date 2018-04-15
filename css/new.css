@@ -438,7 +438,10 @@ iframe {
 }
 
 }
-@media only screen and (aspect-ratio: 16/9) {
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
   .content-main .main-img{
     margin-top:none !important;
     }
