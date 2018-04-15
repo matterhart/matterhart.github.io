@@ -334,8 +334,12 @@ div.rotator > div a{
 @media (max-height:700px){
       html,body{
         overflow: auto;   }
+    .content-main .main-img {
+        margin-top:2em;
+        height:300px
+    }
     .content-footer{
-    position:static;
+    position:static !important;
   }
     
 }
