@@ -132,7 +132,7 @@ a{
   width:27%;
   margin:15px;
 }
-.viewbox:nth-child(odd){
+.viewbox:nth-of-type(odd){
   margin-left: 0px;
 }
 .viewbox img{
