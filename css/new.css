@@ -339,7 +339,7 @@ div.rotator > div a{
     margin:0px  7.5px;
 }
 
-@media (max-height:800px){
+@media (max-height:900px){
       html,body{
         overflow: auto;   
         font-size:16px
