@@ -132,7 +132,7 @@ a{
   width:27%;
   margin:15px;
 }
-.viewbox:nth-of-type(odd){
+.viewbox:nth-of-type(even){
   margin-left: 0px;
 }
 .viewbox img{
@@ -339,7 +339,7 @@ div.rotator > div a{
     margin:0px  7.5px;
 }
 
-@media (max-height:750px){
+@media (max-height:800px){
       html,body{
         overflow: auto;   
         font-size:16px
@@ -438,6 +438,7 @@ div.rotator .italic.small {
   .viewbox
 {
   width:80%;
+   margin:15px !important;
 }
 iframe {
   max-width: 80%;
