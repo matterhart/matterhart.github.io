@@ -59,6 +59,10 @@ a{
 .content-header.subpage a.selected{
     color:#1e535c;
 }
+.content-header.subpage img{
+    position:relative;
+    left:10px;
+}
 .content-header img{
     vertical-align: middle;
     height:200px;
