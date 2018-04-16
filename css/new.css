@@ -132,6 +132,9 @@ a{
   width:27%;
   margin:15px;
 }
+.viewbox:nth-child(odd){
+  margin-left: 0px;
+}
 .viewbox img{
   width: 100%;
 }
