@@ -316,7 +316,10 @@ div.rotator .italic {
 }
 div.rotator > div a{
     font-weight:bold;
-    color:white;    
+    font-family:Brandon;    
+
+
+color:white;    
 }
 .content-footer{
     position: absolute;
