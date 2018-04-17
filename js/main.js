@@ -65,7 +65,7 @@ function fadeAnimate(delta, callback){
 
 function closeModal(e){
     if(e.target.className == "modal" || e.target.className == "close"){
-    var iframe = element.querySelector( 'iframe');
+    var iframe = document.getElementsByTagName('iframe')[0];
     iframe.src = iframe.src;
     document.getElementsByClassName('modal')[0].style.display="none";}
 }
