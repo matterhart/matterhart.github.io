@@ -289,7 +289,7 @@ div.rotato .italic a{
 }
 div.rotator .italic.small {
     text-align: right;
-    font-size:1em;
+    font-size:0.85em;
 }
 div.rotator p i{
     font-family: Libre-italic;
