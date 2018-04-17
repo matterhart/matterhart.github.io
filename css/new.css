@@ -277,12 +277,15 @@ div.rotator{
 
 div.rotator p{
     font-family: Libre;
-    font-size: 0.85em;
+    font-size: 0.75em;
     line-height: 1.75em;
 }
 div.rotator .italic{
     font-family: Brandon-thin;
     font-size: 1.2em;
+}
+div.rotato .italic a{
+   font-family: Bradon;
 }
 div.rotator .italic.small {
     text-align: right;
@@ -361,6 +364,9 @@ div.rotator > div a{
   }
     div.display-rotator{
         min-height:500px;
+    }
+    div.rotator p{
+    font-size:0.85em
     }
 }
 @media (max-width: 965px){
@@ -520,6 +526,9 @@ div.rotator,div.rotator.selected{
     width: 100%;
     opacity: 1;
     background:none !important;
+}
+div.rotator p{
+    font-size:0.85em;
 }
 div.rotator .italic.small {
     margin-top: 0.5em;
