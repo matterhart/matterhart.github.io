@@ -474,6 +474,13 @@ iframe {
   .content-main .subheader{
     font-size: 1.75em;
   }
+  .content-main .subheader span
+  {
+    display:block;
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+  }
   .content-main .main-img{
     display:inline;
     right:0px;
@@ -537,7 +544,12 @@ div.rotator.selected{
 
 .content-footer{
     position:static;
+    /*height:4.5em;*/
 }
+/*.content-footer a {
+  display: inline-block;
+  margin:10px;
+}*/
 iframe {
   max-width: 80%;
   background:none !important;
