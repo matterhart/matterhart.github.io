@@ -179,7 +179,7 @@ a{
   margin-bottom:70px;
 }
 form{
-  text-transform: lowercase;
+  /*text-transform: lowercase;*/
   display:block;width:100%;
 }
 .formHolder{
