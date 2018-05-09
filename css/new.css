@@ -59,10 +59,6 @@ a{
 .content-header.subpage a.selected{
     color:#1e535c;
 }
-.content-header.subpage img{
-    position:relative;
-    left:10px;
-}
 .content-header img{
     vertical-align: middle;
     height:200px;
@@ -80,6 +76,7 @@ a{
 
 }
 .content-main .main-img{
+    display:none;
     height:400px;
     right:10px;
     z-index:2;
@@ -88,25 +85,26 @@ a{
 }
 .content-main .subheader{
     text-align: center;
-    font-family: KDS;
-    font-size:2em;
+    font-family: Brandon-thin;
+    text-transform: uppercase;
+    font-size:1.5em;
+    font-weight: bold;
     color:#1e535c;
     margin-bottom:0.5em;
 }
 .content-main .subheader .line{
-    height:2px;border-radius: 5px;background-color:#e2b4bd; width: 80%;margin: auto;
+    height:2px;border-radius: 5px;background-color:#93a8ac; width: 80%;margin: auto;
     opacity: 0.75;
 }
 .content-main .subheader span{
     display: inline-block;
-    margin:0.5em 0px;
+    margin:0.65em 0px;
 }
-.content-main .subheader .line:first-child{
-    margin-bottom:5px;
-}
+
 .content-main .two-column{
     width:80%;
     margin:auto;
+    color:#1e535c;
 }
 .content-main .two-column>div{
     display:inline-block;
@@ -350,13 +348,6 @@ color:white;
         overflow: auto;   
         font-size:16px
     }
-    .content-main .main-img {
-        margin-top:2em;
-        height:300px
-    }
-    .content-header.subpage img{
-        height:150px;
-    }
     .content-main .image-mural{
         height:209px;
     }
@@ -387,6 +378,7 @@ color:white;
 }
 
 .content-main .main-img {
+    display:inline;
     margin-top:6em;
 }
     two-column{
@@ -459,6 +451,7 @@ iframe {
   and (-webkit-device-pixel-ratio: 3) {
   .content-main .main-img{
     margin-top:6em !important;
+    display:inline;
     }
 }
 
@@ -482,8 +475,9 @@ iframe {
     font-size: 1.75em;
   }
   .content-main .main-img{
-    height:50%;
-      margin-top:30%;
+    display:inline;
+    right:0px;
+    margin-top:30%;
   }
   .content-main .background-mask{
     height:calc(100% - 122px);
