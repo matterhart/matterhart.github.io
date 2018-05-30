@@ -252,8 +252,7 @@ form a.btn:hover{
 }
 .display-rotator{
     display: table;
-    padding-top:1em;
-    height:calc(100% - 1em);
+    height:calc(100%);
     width:100%;
 }
 div.rotate-btn{
@@ -345,7 +344,7 @@ color:white;
 .mobile-show{
   display:none;
 }
-@media (max-height:1000px){
+@media (max-height:1200px){
       html,body{
         overflow: auto;   
         font-size:16px
