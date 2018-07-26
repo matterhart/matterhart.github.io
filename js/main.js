@@ -117,8 +117,7 @@ function sendRequest(payload){
     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xmlHttp.onload = function() {
-        document.getElementsByTagName('form')[0].innerHTML ='<p style="text-align:center;text-transform:none;">Amazing. Thank you for your interest in Sugar Dream Studio. I’ll be in touch soon.</p>';
-    }
+    document.getElementsByTagName('form')[0].innerHTML ='<p style="text-align:center;text-transform:none;">Amazing. Thank you for your interest in Alayna Erhart Studio. I’ll be in touch soon.</p>';    }
   var params = 'payload='+encodeURIComponent(payload)+'&';
     xmlHttp.send( params);
 }
