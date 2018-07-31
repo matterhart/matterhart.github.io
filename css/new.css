@@ -130,9 +130,9 @@ a{
   width:27%;
   margin:15px;
 }
-.viewbox:nth-of-type(even){
+/*.viewbox:nth-of-type(even){
   margin-left: 0px;
-}
+}*/
 .viewbox img{
   width: 100%;
 }
