@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('raleway_thin-webfont.eot');
+    src:  url('raleway_thin-webfont.woff') format('woff'),
+         url('raleway_thin-webfont.ttf') format('truetype'),
+         url('raleway_thin-webfont.svg') format('svg');
+
+    font-style: normal;
+    font-weight: 900;
+
+
+}
+
+html,body
+{
+	font-family: 'Raleway';
+	font-weight: bold;
+	background-color: #F5F7F7;
+	color:#424242;
+	padding:0px;
+	margin:0px;
+	height:100%;
+	width:100%;
+	min-width: 1028px;
+}
+a, a:visited, a:hover
+{
+	color:#0663A6;
+}
+.nav
+{
+	width: 35%;
+	margin: auto;
+    padding-top: 20%;
+}
+.nav a, .nav a:visited
+{
+	color: #4C4C4C;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	width: 18%;
+	padding-bottom: 10px;
+}
+.nav a:hover, .nav a.selected
+{
+	border-bottom:1px solid #4C4C4C;
+}
+.nav a.blue, .nav a.blue:hover, .nav a.blue.selected:hover
+{
+	border-bottom-color:#0663A6;
+}
+
+.nav a.green, .nav a.green:hover, .nav a.green.selected:hover
+{
+	border-bottom-color:#1FA541;
+}
+
+.nav a.red, .nav a.red:hover, .nav a.red.selected:hover
+{
+	border-bottom-color:#BF242D;
+}
+
+.nav a span
+{
+	 font-size:2em;
+}
+.nav .logospan
+{
+	  display: inline-block;
+  width: 18%;
+  padding-bottom: 10px;
+  letter-spacing: -8px;
+  font-size: 3em;
+  vertical-align: top;
+}
+
+.content
+{
+	width:75%;
+	background-color: white;
+	margin:auto;;
+	margin-top:50px;
+	padding:0 2.5%;
+	border:1px solid #D3D7D7;
+	line-height: 1.5em;
+}
+.content .pagetitle
+{
+	font-size: 1.3em;
+}
+.blog_summary
+{
+	cursor: pointer;
+	margin-bottom:3em;
+	border-bottom: 0.5px dashed #ccc;
+}
+.blog_summary:first-of-type
+{
+	margin-top:1em;
+}
+.blog_summary:hover
+{
+	opacity: 0.55;
+}
+.blog_summary .title
+{
+	font-size: 1.2em;
+	margin-top:-0.5em;
+}
+/*.blog_summary .title:hover
+{
+	text-decoration: underline;
+}*/
+.blog_summary .date
+{
+	font-size: 0.7em;
+}
+.blog_summary .blurb
+{
+	margin:0.5em 0px;
+}
+.blogtitle
+{
+	font-size: 1.2em;
+	font-weight:bold;
+}
+table.blog_table
+{
+	width: 100%;
+}
+table.blog_table th
+{
+	vertical-align: bottom;
+	border-bottom: 1px solid #ccc;
+}
+table.blog_table td
+{
+	text-align: center;
+}
+*.mobileshow
+{
+	display: none;
+	margin-left: 10px;
+	cursor: pointer;
+}
+		.workdiv
+		{
+			padding-left:25px;
+		}
+		.workdiv p > span
+		{
+			padding-left:15px;
+			display:inline-block;
+			margin-top: 0.5em;
+		}

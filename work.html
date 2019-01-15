@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matt Erhart // Developer // Seattle</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/mobile.css">
+
+	<link rel="icon" type="image/png" href="/images/favicon.ico">
+	<link rel="image_src" href="http://erhart.me/images/logo.png" />
+	<meta property="og:url" content="http://erhart.me/" />
+	<meta property="og:image" content="http://erhart.me/images/logo.png" />
+	<meta property="og:title" content="Matt Erhart - Projects" />
+	<meta property="og:description" content="Seattle based developer and intrepid freelancer." />
+
+</head>
+<body>
+<script type="text/javascript">
+
+	function toggleWorkBlurbs(span)
+	{
+		var parentDiv = span.parentElement;
+		var workHolder = parentDiv.nextElementSibling;
+		if(workHolder.style.display == 'none')
+		{
+			span.textContent = 'Show Less [ - ]';
+			workHolder.style.display = 'block';
+		}
+		else
+		{
+			span.textContent = 'Show More [ + ]';
+			workHolder.style.display = 'none';
+		}
+	}
+</script>
+<div class="nav" style="padding-top:15px;">
+<span class='logospan' style='cursor:pointer' onclick='location.href="/"' ontouchstart='location.href="/";return false;'>ME</span>
+<a href="./about" title="About" class="red"><span>A</span><br>about</a>
+<a href="./blog" title="Blog" class="green"><span>B</span><br>blog</a>
+<a href="./contact" title='Contact' class="blue"><span>C</span><br>contact</a>
+<a href="./work" title='Work' class="selected"><span>W</span><br>work</a>
+</div>
+<div class='content'>
+<span class='mobileback mobileshow' onclick='location.href="/"' ontouchstart='location.href="/";return false;'>Go Back</span>
+	<p class='pagetitle'>Freelance Gigs</p>
+<p>From gearing up to launch a start up to building out custom content websites, I've had a lot of fun confronting new programming challenges as they come along.<span class='mobileshow' onclick='toggleWorkBlurbs(this)' ontouchstart='toggleWorkBlurbs(this);return false;'>Show More [ + ]</span></p>
+<div class="workholder">
+<div class="workdiv">
+	<p>CrossFit Felix Check-In/Management
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Technologies</span>: PHP, JQuery, MySQL, Apache, AWS</span>
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Description</span>: The gym that I currently coach at needed a simple custom site to allow for easy class registration, class schedule management and daily posting of workouts. While there are similar competitor products, the licensing or UI tend to be unnecessarily complex, so we decided to build something of our own. With a simple responsive design, I built out a system that our members can use with ease and our coaches can seamlessly manage. <a href="http://wod.crossfitfelix.com" target="_blank">Link Here</a></span>
+	</p>
+</div>
+<div class="workdiv">
+	<p>airdo
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Technologies</span>: Python, Flask, JQuery, Twilio API, Parse, Google App Engine</span>
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Description</span>: I had the pleasure of meeting Nathan Bui, CEO of Airdo Inc, in the pivotal days leading up to his start up's launch. After having gotten through the Y Combinator incubation process, Airdo was looking to make a big splash with their revolutionary mobile app. We collaborated on a design that would be impactful, elegant, and informative to help gain traction in their niche market. Combining the power of Twilio integration to increase the ease of access on mobile, a responsive layout, and Parse.com integration, we were able to craft an effective online environment within a mission-critical timeframe. <a href="http://www.airdo.co" target="_blank">Link Here</a></span>
+	</p>
+</div>
+<div class="workdiv">
+	<p>Custom Concept2 Rowing System
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Technologies</span>: C++, SQL Lite, JQuery, Visual Studio</span>
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Description</span>: What began as an attempt to spruce up the doldrums of staring at a small set of numbers on a rowing machine morphed into an adventure in reverse engineering. The Concept2 PM5 (otherwise referred to as ‘the rowing machine') comes equipped with a comprehensive, albeit archaic, ergometer device that tracks meters, calories, time, and pace. In an effort to bolster the CrossFit competition experience, I was tasked with developing a more beautiful UI through which athletes can interactively track their performance. I wrote a small Windows application in C++, which actively polls the device and then relays its information to a webpage, allowing multiple users on a network to track races between rowers. Since its deployment, the tool has added a lot of competitive edge to a sometimes dreaded event around the gym. *Code to be posted to github after debut at an upcoming CrossFit competition.*</span>
+	</p>
+</div>
+<div class="workdiv">
+	<p>r-stuff
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Technologies</span>: Ruby On Rails, MySQL, JQuery</span>
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Description</span>:Upon arriving in Seattle, I worked with Ryan Poll to develop his idea of a social site geared around assorted collectables. Along with the normal trappings of a networking site (messaging other users, commenting on posts, sharing/favoriting items, etc.), we created a business interface that would allow for advertising on searches/tagged items, as well as the ability to market directly to users. Unfortunately we weren't able to gain enough traction to keep the project alive, but it was a fantastic first experience in the science of the start up hustle.</span>
+	</p>
+</div>
+</div>
+<p class='pagetitle'>Corporate Work</p>
+<p>After a number of years in the enterprise world, I've built a considerable amount of systems and respective code bases that I sadly no longer have access to. And while I cannot provision my creations here, I can do my best to explain the breadth of what I've done! <span class='mobileshow' onclick='toggleWorkBlurbs(this)' ontouchstart='toggleWorkBlurbs(this);return false;'>Show More [ + ]</span>
+</p>
+<div class="workdiv">
+	<p>Slalom
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Technologies</span>: C#, ASP.Net, SharePoint 2010/2013, PowerShell, TFS, Visual Studio, MS SQL, JQuery, JQuery UI, Azure Web Services, SMS</span>
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Description</span>: Over the course of my four year tenure at Slalom Consulting, I got to craft a myriad of different systems while working in the internal IT department. From helping out with desktop and device support, all the way up to building a portal that empowered investors to share information and keep tabs on the valuation of the rapidly growing company, I was exposed to a diverse set of technologies.
+	<br><br>
+	For example, SharePoint was a focal system for our daily operations, enabling installation/farm set up to client-side beautifying, all the way down to building custom C# components for use in our deployment. Given its criticality to our day-to-day operations, I was continually challenged by the technology. Another area I was fortunate to explore was building a platform that would easily allow our general managers to contact their teams in case of an emergency. Built on the Azure web offerings with an integration to a third party SMS relay, I created a contact system that we actively used to keep in touch with and monitor responses from our consultants in the field. Beyond any specific technology, we specialized in creating solutions across all of our internal departments that exceeded the needs of their specialized demands.</span>
+	</p>
+</div>
+<div class="workdiv">
+	<p>Bio5
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Technologies</span>: Linux, Apache, MySQL, PHP, JQuery, YUI, Adobe Air, Joomla, Drupal</span>
+	<br><span><span style='border-bottom:1px solid #8E8E8E'>Description</span>:  My first real foray into the world of web development came my senior year of college at the University of Arizona by way of the Bio5 Institute. As a non-degree-granting research department of the University, our team specialized in building content portals as well as custom systems for different groups of researchers ranging from genetic investigators to infectious disease groups. Two of the larger projects that stick out in my mind were: <br>
+	<ul>
+	<li>A custom security application process which integrated with a third party security vendor to automate building access with approval on-site</li>
+	<li>An ordering system that allowed all of our research departments to place orders for the media they used to run experiments, as well as obtain tools necessary to navigate the billing process for federal grants</li>
+
+	</ul> </span>
+	</p>
+</div>
+</div>
+</div>
+</body>
+</html>
