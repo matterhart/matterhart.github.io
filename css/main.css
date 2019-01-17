@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Raleway';
+    font-family: 'LeageMono';
     src: url('fonts/LeagueMono-Medium.eot');
     src:  url('fonts/LeagueMono-Medium.woff') format('woff'),
          url('fonts/LeagueMono-Medium.ttf') format('truetype'),
@@ -10,30 +10,19 @@
 
 
 }
-@font-face {
-    font-family: 'League Spartan';
-    src: url('fonts/leaguespartan-bold.eot');
-    src: url('fonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/leaguespartan-bold.woff2') format('woff2'),
-         url('fonts/leaguespartan-bold.woff') format('woff'),
-         url('fonts/leaguespartan-bold.ttf') format('truetype'),
-         url('fonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-
-}
 
 html,body
 {
-	font-family: 'Raleway';
+	font-family: 'LeageMono';
 	font-weight: bold;
 	background-color: white;/*rgba(119, 119, 119, 0.25);;*/
 	color:#424242;
 	padding:0px;
 	margin:0px;
 	height:100%;
-	width:100%;
-	min-width: 1028px;
+	width: 100vw;
+	/*padding-right: calc(100vw - 100%);*/
+	min-width: 900px;
 }
 a, a:visited, a:hover
 {
@@ -41,7 +30,7 @@ a, a:visited, a:hover
 }
 .nav
 {
-	width: 35%;
+	width: 700px;
 	margin: auto;
     padding-top: 15px;
 }
@@ -94,9 +83,9 @@ a, a:visited, a:hover
 
 .content
 {
-	width:40%;
+	width:900px;
 	background-color: white;
-	margin:auto;;
+	margin:auto;
 	margin-top:50px;
 	padding:0 2.5%;
 	line-height: 1.5em;

@@ -1,4 +1,4 @@
-	@media only screen and (max-device-width: 700px) {
+	@media only all and (max-width: 900px) {
 
 	html,body
 	{
@@ -29,10 +29,7 @@
 		line-height: 2em;
 
 	}
-	.pagetitle
-	{
-		margin-top:0px;
-	}
+
 	.blogtitle
 	{
 		font-weight: normal;
