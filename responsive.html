@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matt Erhart // Developer // Seattle</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="./css/mobile.css">
+	<link rel="icon" type="image/png" href="/images/favicon.ico">
+	<link rel="image_src" href="http://erhart.me/images/logo.png" />
+	<meta property="og:url" content="http://erhart.me/blog?b=blog-post-one" />
+	<meta property="og:image" content="http://erhart.me/images/logo.png" />
+	<meta property="og:title" content="On the Merits of :first-child" />
+	<meta property="og:description" content="While building a client site recently, I was in the process of trudging out the same CSS selectors over and over again..." />
+</head>
+<body>
+
+<div class="nav">
+<span class='logospan' onclick='location.href="/"' ontouchstart='location.href="/";return false;'>ME</span>
+<a href="./about" title="About" class="red" ><span>A</span><br>about</a>
+<a href="./blog" title="Blog" class="green selected"><span>B</span><br>blog</a>
+<a href="./contact" title='Contact' class="blue"><span>C</span><br>contact</a>
+<a href="./work" title='Work'><span>W</span><br>work</a>
+</div>
+<div class='content'>
+<span class='mobileshow' onclick='location.href="/blog"' ontouchstart='location.href="/blog";return false;'>Go Back</span>
+	<p class="blogtitle">Musings on responsive design</p>
+
+<p>The term “responsive design” gets tossed around rather liberally in the web development field and while the trope may be a touch tired, it does highlight a useful piece of the design process. For illustrative purpose, I will define “responsive design” as: UX continuity across multiple device platforms. The general approach to this continuity being relatively static content designed to best target each platform.</p>
+
+<p>As with any project, it's best to start by attempting to document all of the functionality ahead of time. It isn't always viable to create an exhaustive list but a generally granular list is normally achievable. After creating a functionality list, determining what devices (mobile, tablet and desktop) require which actions is the next best step. An example of this use-case scenario would include sending a customized download link to a user's mobile device—an action that fits well on the tablet and desktop lists but is superfluous for a mobile user already viewing the page.</p>
+
+<p>Following up from the UX action list, I tend to attempt generating assets for proposed layouts—a process during which properly targeting each device becomes critical.  At Microsoft's developer convention (<a href="https://channel9.msdn.com/Events/Build/2014/3-541" target="_blank">Build 2014</a>), I happened to sit in on a good session covering how to design across multiple form factors. The general conclusion, which I tend to follow as well, is to only worry about two screen sizes when generating assets: one for high-resolution tablet and desktop screens, and another for the lighter payload of mobile devices that scales appropriately to the smaller screen.</p>
+
+<p>These may seem like incredibly basics steps to take when developing an experience that translates well across a myriad of devices but they do set a solid foundation for to build from. Getting too caught up in making sure that every width is a percentage, every font-size an EM and every margin spacing is pixel-perfect can obfuscate the goal line of delivering a solid web site. From this basis, one can very easily create a fluid, content-rich interaction for a user with ease.
+</p>
+</div>
+
+</body>
+</html>
