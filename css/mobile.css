@@ -2,17 +2,12 @@
 
 	html,body
 	{
-		font-size:42pt;
+		font-size:24pt;
 		font-weight: normal;
 		color:#333;
 		min-width: 0px;
 	}
-	.nav
-	{
-		width: 75%;
-		padding-right: 10%;
 
-	}
 	.nav .logospan
 	{
 		display: block;
@@ -30,6 +25,9 @@
 	.content
 	{
 		padding:0px 5%;
+		width:90%;
+		line-height: 2em;
+
 	}
 	.pagetitle
 	{
@@ -42,19 +40,10 @@
 	}
 	.mobileshow
 	{
-		display: inline-block;
+		cursor: pointer;
+		display: block;
 	}
-	.workholder
-	{
-		display:none;
-	}
-	.mobileback
-	{
-	    margin-left: 0px;
-	    margin-bottom: 0.5em;
-	    display: block;
-	    margin: 0.5em 0px;
-	}
+
 
 	table.blog_table ,.blog_table thead, .blog_table tbody,.blog_table th, .blog_table td, .blog_table tr { 
 		display: block; 
