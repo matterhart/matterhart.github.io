@@ -1,85 +1,100 @@
-	@media only all and (max-width: 900px) {
-
-	html,body
-	{
-		font-size:24pt;
-		font-weight: normal;
-		color:#333;
-		min-width: 0px;
-	}
-
-	.nav .logospan
-	{
-		display: block;
-	    margin: auto;
-	    width: auto;
-	    text-align: center;
-	    letter-spacing: -26px;
-	}
-	.nav a, .nav a:visited
-	{
-		width:170px;
-		margin:10px;
-		display:none;
-	}
-	.content
-	{
-		padding:0px 5%;
-		width:90%;
-		line-height: 2em;
-
-	}
-
-	.blogtitle
-	{
-		font-weight: normal;
-		margin-top: 0px;
-	}
-	.mobileshow
-	{
-		cursor: pointer;
-		display: block;
-	}
-
-
-	table.blog_table ,.blog_table thead, .blog_table tbody,.blog_table th, .blog_table td, .blog_table tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	.blog_table thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	.blog_table tr { border: 1px solid #ccc; }
-	
-	.blog_table td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-		padding-bottom:1.5em;
-		text-align: center !important;
-	}
-	
-	.blog_table td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-
-	}
-	.blog_table td:nth-of-type(1):before { content: "Selector"; }
-	.blog_table td:nth-of-type(2):before { content: " Avg Load Time \a \0020 (10,000 Items)";white-space: pre; }
-	.blog_table td:nth-of-type(3):before { content: " Avg Load Time \a \0020 (10,000 Items)";white-space: pre; }
-	.blog_table td:nth-of-type(4):before { content: " Avg Load Time \a \0020 (10,000 Items)";white-space: pre;}
-	.blog_table td:nth-of-type(5):before { content: " Avg Load Time \a \0020 (10,000 Items)";white-space: pre;}
-		
-	}
+ @media only screen and (max-width: 900px) {
+     html,body{
+         max-width: 100%;
+    }
+     .content{
+         width: 100%;
+         margin:0px;
+         padding:0px;
+    }
+     .content > *{
+         padding-left: 10px;
+         padding-right:10px;
+    }
+}
+ @media only screen and (max-device-width: 900px) {
+     html,body {
+         font-size:24pt;
+         font-weight: normal;
+         color:#333;
+    }
+     .nav .logospan {
+         display: block;
+         margin: auto;
+         width: auto;
+         text-align: center;
+         letter-spacing: -26px;
+    }
+     .nav a, .nav a:visited {
+         width:170px;
+         margin:10px;
+         display:none;
+    }
+     .content {
+         margin:0px 5%;
+         width:90%;
+         line-height: 2em;
+    }
+     .content > *{
+         padding: inherit;
+    }
+     .blogtitle {
+         font-weight: normal;
+         margin-top: 0px;
+    }
+     .mobileshow {
+         cursor: pointer;
+         display: block;
+    }
+     table.blog_table ,.blog_table thead, .blog_table tbody,.blog_table th, .blog_table td, .blog_table tr {
+         display: block;
+    }
+    /* Hide table headers (but not display: none;
+    , for accessibility) */
+     .blog_table thead tr {
+         position: absolute;
+         top: -9999px;
+         left: -9999px;
+    }
+     .blog_table tr {
+         border: 1px solid #ccc;
+    }
+     .blog_table td {
+        /* Behave like a "row" */
+         border: none;
+         border-bottom: 1px solid #eee;
+         position: relative;
+         padding-left: 50%;
+         padding-bottom:1.5em;
+         text-align: center !important;
+    }
+     .blog_table td:before {
+        /* Now like a table header */
+         position: absolute;
+        /* Top/left values mimic padding */
+         top: 6px;
+         left: 6px;
+         width: 45%;
+         padding-right: 10px;
+         white-space: nowrap;
+    }
+     .blog_table td:nth-of-type(1):before {
+         content: "Selector";
+    }
+     .blog_table td:nth-of-type(2):before {
+         content: " Avg Load Time \a \0020 (10,000 Items)";
+        white-space: pre;
+    }
+     .blog_table td:nth-of-type(3):before {
+         content: " Avg Load Time \a \0020 (10,000 Items)";
+        white-space: pre;
+    }
+     .blog_table td:nth-of-type(4):before {
+         content: " Avg Load Time \a \0020 (10,000 Items)";
+        white-space: pre;
+    }
+     .blog_table td:nth-of-type(5):before {
+         content: " Avg Load Time \a \0020 (10,000 Items)";
+        white-space: pre;
+    }
+}
