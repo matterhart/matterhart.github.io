@@ -1,19 +1,15 @@
 @font-face {
-     font-family: 'LeageMono';
-     src: url('fonts/LeagueMono-Medium.eot');
-     src: url('fonts/LeagueMono-Medium.woff') format('woff'), url('fonts/LeagueMono-Medium.ttf') format('truetype'), url('fonts/LeagueMono-Medium.svg') format('svg');
+     font-family: Charter, "Linux Libertine", Georgia, serif;
      font-style: normal;
-     font-weight: 900;
 }
  html,body {
-     font-family: 'LeageMono';
-     font-weight: bold;
      background-color: white;
      color:#424242;
      padding:0px;
      margin:0px;
      height:100%;
      width: 100vw;
+     font-size: 18px;
 }
  a, a:visited, a:hover {
      color:#0663A6;
