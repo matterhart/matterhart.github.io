@@ -14,16 +14,19 @@
 }
  @media only screen and (max-device-width: 900px) {
      html,body {
-         font-size:24pt;
+         /*font-size:24pt;*/
          font-weight: normal;
          color:#333;
     }
+    .nav {
+        width:100%;
+    }
      .nav .logospan {
          display: block;
-         margin: auto;
+         margin: 0px;
          width: auto;
          text-align: center;
-         letter-spacing: -26px;
+         /*letter-spacing: -30px;*/
     }
      .nav a, .nav a:visited {
          width:170px;
@@ -31,12 +34,12 @@
          display:none;
     }
      .content {
-         margin:0px 5%;
-         width:90%;
+         /*margin:0px 5%;
+         width:90%;*/
          line-height: 2em;
     }
      .content > *{
-         padding: inherit;
+         padding: : 0px 10px;
     }
      .blogtitle {
          font-weight: normal;
